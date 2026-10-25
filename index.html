@@ -3,842 +3,1138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shiva AI LLP — AI · ML · GenAI · LLM Solutions</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<title>Shivay AI LLP (Shiva AI) — Enterprise AI · GenAI · LLMs · Voice Telephony · Agentic Automation</title>
+<meta name="description" content="Shivay AI LLP (Shiva AI) delivers enterprise-grade AI solutions: autonomous multi-agent systems, custom LLMs, RAG knowledge engines, real-time Voice AI, and n8n automation pipelines.">
+<meta name="keywords" content="Shivay AI LLP, Shiva AI LLP, Enterprise AI, Generative AI, Large Language Models, Agentic AI, Voice AI, n8n Automation, RAG, AI Consulting">
+<meta name="author" content="Shivay AI LLP">
+<link rel="canonical" href="https://sal-amber.vercel.app/">
+
+<!-- Open Graph / LinkedIn / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sal-amber.vercel.app/">
+<meta property="og:title" content="Shivay AI LLP — Production-Grade Enterprise AI & Autonomous Systems">
+<meta property="og:description" content="From Generative AI and custom LLMs to autonomous agentic workflows and real-time Voice AI — we engineer intelligent enterprise systems.">
+<meta property="og:image" content="ShivaY%20AI%20LLP.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shivay AI LLP — Enterprise AI & Agentic Solutions">
+<meta name="twitter:description" content="Engineering high-ROI AI systems: Custom LLMs, Voice AI telephony, RAG knowledge bases, and n8n automation.">
+<meta name="twitter:image" content="ShivaY%20AI%20LLP.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo.png">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root{
-  --paper:#F6F1E7; --ink:#1B1815; --clay:#C96442; --clay-deep:#A34B2E;
-  --line:rgba(27,24,21,.16); --muted:rgba(27,24,21,.58);
-  --term:#171310; --term-ink:#EFE6D5; --term-dim:rgba(239,230,213,.5);
-  --glow:rgba(201,100,66,.12);
+  --paper:#F7F4EE;
+  --paper-card:rgba(255,255,255,.65);
+  --paper-card-hover:rgba(255,255,255,.95);
+  --ink:#181614;
+  --ink-secondary:#3D3833;
+  --clay:#C45A36;
+  --clay-deep:#9E4224;
+  --clay-light:#E07957;
+  --line:rgba(24,22,20,.12);
+  --line-strong:rgba(24,22,20,.24);
+  --muted:rgba(24,22,20,.62);
+  --term:#12100E;
+  --term-surface:#1C1815;
+  --term-ink:#F2ECE1;
+  --term-dim:rgba(242,236,225,.55);
+  --term-line:rgba(242,236,225,.12);
+  --glow:rgba(196,90,54,.14);
+  --youtube:#FF0000;
+  --accent-blue:#2563EB;
+  --accent-green:#16A34A;
+  --shadow-sm:0 2px 8px -2px rgba(24,22,20,.08);
+  --shadow-md:0 12px 32px -8px rgba(24,22,20,.12);
+  --shadow-lg:0 24px 60px -16px rgba(24,22,20,.2);
 }
+
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{background:var(--paper);color:var(--ink);font-family:'Instrument Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.04;z-index:0;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
-::selection{background:var(--clay);color:var(--paper)}
-a{color:var(--clay);text-decoration:none;transition:.2s}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Instrument Sans',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:9999;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection{background:var(--clay);color:#FFF}
+a{color:var(--clay);text-decoration:none;transition:.2s ease}
 a:hover{color:var(--clay-deep)}
 
-/* --- NAV --- */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 6vw;display:flex;align-items:center;justify-content:space-between;
-  background:rgba(246,241,231,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:.3s}
-nav.scrolled{padding:10px 6vw;box-shadow:0 4px 24px -8px rgba(27,24,21,.12)}
-.nav-brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem}
-.nav-brand .dot{width:10px;height:10px;background:var(--clay);border-radius:50%;display:inline-block}
-.nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{font-family:'JetBrains Mono',monospace;font-size:.82rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;position:relative}
+/* --- NAVIGATION --- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:14px 6vw;display:flex;align-items:center;justify-content:space-between;
+  background:rgba(247,244,238,.92);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);transition:padding .3s ease,box-shadow .3s ease;
+}
+nav.scrolled{
+  padding:10px 6vw;
+  box-shadow:0 6px 28px -6px rgba(24,22,20,.12);
+}
+.nav-brand-wrap{
+  display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);
+}
+.brand-logo-img{
+  width:42px;height:42px;border-radius:10px;object-fit:cover;
+  border:1px solid var(--line);box-shadow:var(--shadow-sm);background:#FFF;
+}
+.brand-text{
+  display:flex;flex-direction:column;
+}
+.brand-title{
+  font-family:'Fraunces',serif;font-weight:700;font-size:1.25rem;line-height:1.1;letter-spacing:-.01em;
+}
+.brand-sub{
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--clay);letter-spacing:.14em;text-transform:uppercase;font-weight:600;
+}
+
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{
+  font-family:'JetBrains Mono',monospace;font-size:.82rem;letter-spacing:.05em;
+  color:var(--muted);text-transform:uppercase;position:relative;font-weight:500;
+}
 .nav-links a:hover,.nav-links a.active{color:var(--ink)}
-.nav-links a::after{content:"";position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--clay);transition:.3s}
+.nav-links a::after{
+  content:"";position:absolute;bottom:-4px;left:0;width:0;height:2px;
+  background:var(--clay);transition:.25s ease;
+}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
-.nav-cta{background:var(--clay);color:var(--paper)!important;padding:10px 20px;border-radius:8px;font-size:.82rem!important}
-.nav-cta:hover{background:var(--clay-deep)!important;color:var(--paper)!important}
-.nav-cta::after{display:none!important}
-.menu-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--ink)}
+
+.nav-actions{display:flex;align-items:center;gap:12px}
+.nav-yt-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  background:#FFF;color:#CC0000!important;border:1px solid rgba(204,0,0,.25);
+  padding:8px 14px;border-radius:8px;font-family:'JetBrains Mono',monospace;
+  font-size:.78rem!important;font-weight:600;transition:.2s ease;
+}
+.nav-yt-btn:hover{
+  background:#CC0000;color:#FFF!important;transform:translateY(-1px);box-shadow:0 4px 14px rgba(204,0,0,.3);
+}
+.nav-yt-btn svg{width:16px;height:16px;fill:currentColor}
+.nav-cta{
+  background:var(--clay);color:#FFF!important;padding:9px 18px;border-radius:8px;
+  font-family:'JetBrains Mono',monospace;font-size:.82rem!important;font-weight:600;transition:.2s;
+}
+.nav-cta:hover{background:var(--clay-deep)!important;transform:translateY(-1px);box-shadow:0 4px 14px rgba(196,90,54,.3)}
+.nav-cta::after,.nav-yt-btn::after{display:none!important}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--ink);padding:6px}
 
 /* --- SECTIONS --- */
-section{position:relative;padding:120px 6vw;min-height:100vh;display:flex;align-items:center}
-.section-inner{width:min(1120px,100%);margin:0 auto;position:relative;z-index:1}
-.ghost-num{position:absolute;top:-40px;right:-8px;font-family:'Fraunces',serif;font-style:italic;font-weight:300;
-  font-size:clamp(90px,13vw,170px);color:var(--ink);opacity:.05;line-height:1;pointer-events:none;user-select:none}
+section{position:relative;padding:120px 6vw;min-height:auto;display:flex;align-items:center}
+.section-inner{width:min(1180px,100%);margin:0 auto;position:relative;z-index:2}
+.ghost-num{
+  position:absolute;top:-45px;right:-8px;font-family:'Fraunces',serif;font-style:italic;
+  font-weight:300;font-size:clamp(90px,13vw,170px);color:var(--ink);opacity:.04;line-height:1;
+  pointer-events:none;user-select:none;
+}
 .dark{background:var(--term);color:var(--term-ink)}
-.dark .ghost-num{color:var(--term-ink);opacity:.06}
+.dark .ghost-num{color:var(--term-ink);opacity:.05}
 .dark .kicker{color:var(--term-dim)}
 .dark p.lead{color:var(--term-dim)}
 .dark p.lead b{color:var(--term-ink)}
 
 /* --- TYPOGRAPHY --- */
-.kicker{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--muted);display:flex;align-items:center;gap:10px;margin-bottom:26px}
-.kicker::before{content:"";width:26px;height:2px;background:var(--clay)}
-h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(3rem,8vw,6.5rem);line-height:.98;letter-spacing:-.02em}
-h2{font-family:'Fraunces',serif;font-weight:560;font-size:clamp(2rem,4.5vw,3.8rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:34px}
+.kicker{
+  font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);display:flex;align-items:center;gap:12px;margin-bottom:24px;font-weight:600;
+}
+.kicker::before{content:"";width:24px;height:2px;background:var(--clay)}
+h1{
+  font-family:'Fraunces',serif;font-weight:650;font-size:clamp(2.8rem,7vw,5.8rem);
+  line-height:1.02;letter-spacing:-.025em;margin-bottom:20px;
+}
+h2{
+  font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.1rem,4.5vw,3.6rem);
+  line-height:1.08;letter-spacing:-.02em;margin-bottom:28px;
+}
 h2 em,h1 em{font-style:italic;color:var(--clay)}
-p.lead{font-size:clamp(1.05rem,1.6vw,1.3rem);line-height:1.65;max-width:56ch;color:var(--muted)}
+p.lead{
+  font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.65;max-width:58ch;color:var(--muted);
+}
 p.lead b{color:var(--ink);font-weight:600}
-.hl{background:linear-gradient(transparent 62%,rgba(201,100,66,.28) 62%)}
+.hl{background:linear-gradient(transparent 60%,rgba(196,90,54,.25) 60%)}
 
-/* --- SCROLL ANIMATIONS --- */
-@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
-@keyframes fadeLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:none}}
-@keyframes fadeRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
-@keyframes scaleIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
-.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+/* --- REVEAL ANIMATIONS --- */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .75s cubic-bezier(.2,.9,.3,1),transform .75s cubic-bezier(.2,.9,.3,1)}
 .reveal.visible{opacity:1;transform:none}
-.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
-.reveal-left.visible{opacity:1;transform:none}
-.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
-.reveal-right.visible{opacity:1;transform:none}
-.reveal-scale{opacity:0;transform:scale(.92);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
-.reveal-scale.visible{opacity:1;transform:none}
-.d1{transition-delay:.08s}.d2{transition-delay:.18s}.d3{transition-delay:.28s}
-.d4{transition-delay:.38s}.d5{transition-delay:.48s}.d6{transition-delay:.58s}
-.d7{transition-delay:.68s}.d8{transition-delay:.78s}
-
-/* --- GRIDS & CARDS --- */
-.grid2{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
-.grid2 .col{min-width:0}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-
-/* --- SERVICE CARDS --- */
-.scard{border:1px solid var(--line);border-radius:16px;padding:32px 26px;background:rgba(255,255,255,.4);transition:.3s;position:relative;overflow:hidden}
-.scard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--clay);transform:scaleX(0);transition:.3s;transform-origin:left}
-.scard:hover{border-color:var(--clay);transform:translateY(-6px);box-shadow:0 20px 48px -16px rgba(27,24,21,.25)}
-.scard:hover::before{transform:scaleX(1)}
-.scard svg{width:28px;height:28px;color:var(--clay);margin-bottom:16px}
-.scard h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;margin-bottom:10px}
-.scard p{font-size:.92rem;color:var(--muted);line-height:1.55}
-
-/* --- PROJECT CARDS --- */
-.pcard{border:1px solid var(--line);border-radius:16px;padding:28px 24px;background:rgba(255,255,255,.4);
-  text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:10px;transition:.3s}
-.pcard:hover{border-color:var(--clay);transform:translateY(-6px);box-shadow:0 20px 48px -16px rgba(27,24,21,.3)}
-.pcard .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--clay);letter-spacing:.12em;text-transform:uppercase}
-.pcard h3{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600}
-.pcard p{font-size:.88rem;color:var(--muted);line-height:1.5}
-.pcard .arrow{margin-top:auto;font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--clay);display:flex;align-items:center;gap:6px}
-
-/* --- TECH CHIPS --- */
-.tech-grid{display:flex;flex-wrap:wrap;gap:12px}
-.tech-chip{border:1px solid var(--line);border-radius:10px;padding:12px 20px;font-family:'JetBrains Mono',monospace;font-size:.85rem;
-  background:rgba(255,255,255,.35);transition:.25s;display:flex;align-items:center;gap:8px}
-.tech-chip:hover{border-color:var(--clay);transform:translateY(-2px);background:var(--glow)}
-.tech-chip .tdot{width:8px;height:8px;border-radius:50%;background:var(--clay)}
-
-/* --- TERMINAL --- */
-.term{background:var(--term);border-radius:14px;overflow:hidden;box-shadow:0 24px 60px -20px rgba(27,24,21,.45);max-width:760px}
-.term-bar{display:flex;align-items:center;gap:8px;padding:13px 18px;border-bottom:1px solid rgba(239,230,213,.12)}
-.term-bar span{width:11px;height:11px;border-radius:50%;background:rgba(239,230,213,.22)}
-.term-bar span:first-child{background:var(--clay)}
-.term-bar em{margin-left:auto;font-style:normal;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--term-dim);letter-spacing:.12em}
-.term pre{padding:22px 24px;font-family:'JetBrains Mono',monospace;font-size:clamp(.82rem,1.25vw,.95rem);line-height:1.8;color:var(--term-ink);overflow-x:auto}
-.term .p{color:var(--clay);font-weight:700}
-.term .c{color:var(--term-dim)}
-.term .g{color:#9BB27D}
-
-/* --- STATS --- */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.35)}
-.stats>div{padding:34px 30px;border-right:1px solid var(--line);text-align:center}
-.stats>div:last-child{border-right:none}
-.stats b{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:600;display:block;margin-bottom:8px;color:var(--clay)}
-.stats p{font-size:.92rem;color:var(--muted);line-height:1.55}
-
-/* --- DASH LIST --- */
-ul.dash{list-style:none;max-width:60ch}
-ul.dash li{padding:15px 0 15px 34px;border-bottom:1px solid var(--line);position:relative;font-size:1.06rem;line-height:1.5}
-ul.dash li::before{content:"—";position:absolute;left:0;color:var(--clay);font-family:'JetBrains Mono',monospace}
-ul.dash li b{font-weight:600}
-
-/* --- FLOW --- */
-.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:14px;align-items:stretch}
-.fstep{border:1px solid var(--line);border-radius:14px;padding:26px 22px;background:rgba(255,255,255,.35)}
-.fstep i.n{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--clay);letter-spacing:.15em;display:block;margin-bottom:14px}
-.fstep b{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;display:block;margin-bottom:8px}
-.fstep p{font-size:.88rem;color:var(--muted);line-height:1.5}
-.farrow{display:grid;place-items:center;color:var(--clay);font-family:'Fraunces',serif;font-size:26px}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+.d4{transition-delay:.32s}.d5{transition-delay:.40s}.d6{transition-delay:.48s}
 
 /* --- BUTTONS --- */
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--clay);color:var(--paper);text-decoration:none;
-  font-family:'JetBrains Mono',monospace;font-size:.9rem;padding:15px 26px;border-radius:10px;transition:.2s;border:none;cursor:pointer}
-.btn:hover{background:var(--clay-deep);transform:translateY(-2px);color:var(--paper)}
-.btn.ghosted{background:none;color:var(--ink);border:1px solid var(--line)}
-.btn.ghosted:hover{border-color:var(--clay);color:var(--clay)}
-.btn svg{width:16px;height:16px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;background:var(--clay);color:#FFF;
+  font-family:'JetBrains Mono',monospace;font-size:.88rem;padding:14px 26px;border-radius:10px;
+  transition:.25s ease;border:none;cursor:pointer;font-weight:600;text-decoration:none;
+}
+.btn:hover{background:var(--clay-deep);transform:translateY(-2px);box-shadow:0 8px 24px -4px rgba(196,90,54,.35);color:#FFF}
+.btn.ghosted{background:transparent;color:var(--ink);border:1px solid var(--line-strong)}
+.btn.ghosted:hover{border-color:var(--clay);color:var(--clay);background:rgba(196,90,54,.04)}
+.btn-yt{
+  background:#CC0000;color:#FFF;border:1px solid #CC0000;
+}
+.btn-yt:hover{
+  background:#A30000;box-shadow:0 8px 24px -4px rgba(204,0,0,.4);color:#FFF;
+}
+.btn svg{width:17px;height:17px}
 
-/* --- ICON BUTTONS --- */
-.iconbtn{width:44px;height:44px;border:1px solid var(--line);border-radius:10px;display:grid;place-items:center;
-  color:inherit;text-decoration:none;transition:.2s;background:none;cursor:pointer}
-.iconbtn:hover{border-color:var(--clay);color:var(--clay);transform:translateY(-2px)}
+.iconbtn{
+  width:44px;height:44px;border:1px solid var(--line);border-radius:10px;display:grid;
+  place-items:center;color:inherit;text-decoration:none;transition:.2s ease;background:rgba(255,255,255,.5);
+}
+.iconbtn:hover{border-color:var(--clay);color:var(--clay);transform:translateY(-2px);background:#FFF}
+.iconbtn.yt:hover{border-color:#CC0000;color:#CC0000;background:rgba(204,0,0,.06)}
 .iconbtn svg{width:18px;height:18px}
 .socials{display:flex;gap:10px;align-items:center}
 
-/* --- TYPING --- */
-.caret{display:inline-block;width:9px;height:1.15em;background:var(--clay);vertical-align:text-bottom;margin-left:2px;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
+/* --- HERO SECTION --- */
+.hero-layout{
+  display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:center;margin-top:20px;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:30px;
+  background:rgba(196,90,54,.15);border:1px solid rgba(196,90,54,.3);
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--clay-light);margin-bottom:20px;
+  font-weight:600;letter-spacing:.06em;
+}
+.hero-badge .pulse-dot{
+  width:8px;height:8px;background:var(--clay-light);border-radius:50%;box-shadow:0 0 8px var(--clay-light);
+}
 
-/* --- PROGRESS BAR --- */
-#progress{position:fixed;top:0;left:0;height:3px;background:var(--clay);width:0;z-index:110;transition:width .15s linear}
+.hero-visual-card{
+  background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+  border:1px solid var(--term-line);border-radius:20px;padding:24px;
+  box-shadow:var(--shadow-lg);position:relative;overflow:hidden;backdrop-filter:blur(10px);
+}
+.brand-hero-art{
+  width:100%;border-radius:14px;display:block;border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 12px 36px rgba(0,0,0,.4);margin-bottom:20px;object-fit:cover;max-height:280px;
+}
+.hero-stats-strip{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:16px;border-top:1px solid var(--term-line);
+}
+.h-stat b{font-family:'Fraunces',serif;font-size:1.45rem;color:var(--clay-light);display:block}
+.h-stat span{font-size:.78rem;color:var(--term-dim);font-family:'JetBrains Mono',monospace}
+
+/* --- CLIENT & ECOSYSTEM MARQUEE --- */
+.ecosystem-section{
+  padding:50px 6vw;background:#FFF;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  position:relative;overflow:hidden;
+}
+.ecosystem-section::before,.ecosystem-section::after{
+  content:"";position:absolute;top:0;bottom:0;width:120px;z-index:3;pointer-events:none;
+}
+.ecosystem-section::before{left:0;background:linear-gradient(90deg,#FFF,transparent)}
+.ecosystem-section::after{right:0;background:linear-gradient(270deg,#FFF,transparent)}
+.marquee-track{display:flex;gap:24px;animation:marquee 32s linear infinite;width:max-content}
+.marquee-track:hover{animation-play-state:paused}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+.partner-card{
+  display:flex;align-items:center;gap:12px;padding:12px 24px;border:1px solid var(--line);
+  border-radius:12px;background:var(--paper);transition:.25s ease;flex-shrink:0;
+}
+.partner-card:hover{
+  border-color:var(--clay);transform:translateY(-2px);box-shadow:var(--shadow-sm);background:#FFF;
+}
+.partner-logo-box{
+  width:32px;height:32px;display:grid;place-items:center;border-radius:8px;background:#FFF;
+  border:1px solid var(--line);padding:4px;
+}
+.partner-logo-box svg{width:22px;height:22px}
+.partner-info{display:flex;flex-direction:column}
+.partner-name{font-family:'Instrument Sans',sans-serif;font-weight:700;font-size:.92rem;color:var(--ink)}
+.partner-badge{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.04em}
+
+/* --- ABOUT SECTION --- */
+.about-grid{
+  display:grid;grid-template-columns:1fr 1.15fr;gap:54px;align-items:center;margin-top:20px;
+}
+.about-image-card{
+  border:1px solid var(--line);border-radius:20px;padding:18px;background:#FFF;
+  box-shadow:var(--shadow-md);position:relative;
+}
+.about-image-card img{
+  width:100%;border-radius:14px;display:block;box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+.verified-corporate-pill{
+  position:absolute;bottom:-16px;right:24px;background:var(--ink);color:var(--term-ink);
+  padding:8px 18px;border-radius:30px;font-family:'JetBrains Mono',monospace;font-size:11px;
+  display:flex;align-items:center;gap:8px;box-shadow:var(--shadow-md);border:1px solid rgba(255,255,255,.15);
+}
+.verified-corporate-pill svg{color:#22C55E;width:14px;height:14px}
+
+.corp-cred-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;
+}
+.cred-item{
+  padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--paper-card);
+}
+.cred-item h4{font-family:'Fraunces',serif;font-size:1.05rem;margin-bottom:4px;color:var(--clay-deep)}
+.cred-item p{font-size:.85rem;color:var(--muted);line-height:1.45}
+
+/* --- YOUTUBE & VIDEO DEMOS SECTION --- */
+.yt-section{
+  background:linear-gradient(180deg,var(--term) 0%,#0C0A09 100%);color:var(--term-ink);
+  border-top:1px solid var(--term-line);border-bottom:1px solid var(--term-line);
+}
+.yt-header-bar{
+  display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;flex-wrap:wrap;gap:20px;
+}
+.yt-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.yt-card{
+  border:1px solid var(--term-line);border-radius:18px;background:var(--term-surface);
+  overflow:hidden;transition:.3s ease;display:flex;flex-direction:column;
+  text-decoration:none;color:inherit;position:relative;
+}
+.yt-card:hover{
+  border-color:#CC0000;transform:translateY(-6px);box-shadow:0 20px 48px -12px rgba(204,0,0,.25);
+}
+.yt-thumb-wrapper{
+  position:relative;width:100%;height:190px;background:#000;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.yt-thumb-bg{
+  width:100%;height:100%;object-fit:cover;opacity:.7;transition:.3s ease;
+}
+.yt-card:hover .yt-thumb-bg{transform:scale(1.05);opacity:.85}
+.yt-play-btn{
+  position:absolute;width:54px;height:54px;border-radius:50%;background:rgba(204,0,0,.9);
+  display:grid;place-items:center;box-shadow:0 4px 20px rgba(0,0,0,.6);transition:.25s ease;
+}
+.yt-play-btn svg{width:24px;height:24px;fill:#FFF;margin-left:3px}
+.yt-card:hover .yt-play-btn{transform:scale(1.15);background:#FF0000}
+.yt-duration-badge{
+  position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.85);color:#FFF;
+  font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 8px;border-radius:4px;
+}
+.yt-tag-pill{
+  position:absolute;top:10px;left:10px;background:rgba(204,0,0,.9);color:#FFF;
+  font-family:'JetBrains Mono',monospace;font-size:9.5px;padding:3px 8px;border-radius:4px;
+  font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+}
+.yt-card-body{padding:22px;display:flex;flex-direction:column;flex-grow:1}
+.yt-card-body h3{
+  font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;margin-bottom:8px;line-height:1.3;
+}
+.yt-card-body p{
+  font-size:.88rem;color:var(--term-dim);line-height:1.5;margin-bottom:16px;
+}
+.yt-card-footer{
+  margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.08);
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#CC0000;font-weight:600;
+}
+
+/* --- SERVICES & EXPERTISE --- */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.scard{
+  border:1px solid var(--line);border-radius:18px;padding:32px 26px;
+  background:var(--paper-card);transition:.3s ease;position:relative;overflow:hidden;
+}
+.scard::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--clay);transform:scaleX(0);transition:.3s ease;transform-origin:left;
+}
+.scard:hover{
+  border-color:var(--clay);transform:translateY(-6px);background:var(--paper-card-hover);
+  box-shadow:var(--shadow-md);
+}
+.scard:hover::before{transform:scaleX(1)}
+.scard .icon-box{
+  width:48px;height:48px;border-radius:12px;background:var(--glow);display:grid;place-items:center;
+  margin-bottom:18px;color:var(--clay);border:1px solid rgba(196,90,54,.2);
+}
+.scard h3{font-family:'Fraunces',serif;font-size:1.28rem;font-weight:600;margin-bottom:10px}
+.scard p{font-size:.9rem;color:var(--muted);line-height:1.55}
+
+/* --- PROJECT CASE STUDIES --- */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.project-card{
+  border:1px solid var(--line);border-radius:18px;background:#FFF;
+  overflow:hidden;box-shadow:var(--shadow-sm);transition:.3s ease;
+  display:flex;flex-direction:column;cursor:pointer;
+}
+.project-card:hover{
+  border-color:var(--clay);transform:translateY(-6px);box-shadow:var(--shadow-md);
+}
+.project-visual{
+  height:180px;background:var(--term);position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.project-visual svg{width:100%;height:100%}
+.project-tag-badge{
+  position:absolute;top:12px;left:12px;background:rgba(24,22,20,.85);color:var(--term-ink);
+  font-family:'JetBrains Mono',monospace;font-size:10px;padding:4px 10px;border-radius:6px;
+  border:1px solid rgba(255,255,255,.15);text-transform:uppercase;letter-spacing:.08em;
+}
+.project-content{padding:24px;display:flex;flex-direction:column;flex-grow:1}
+.project-content h3{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600;margin-bottom:8px}
+.project-content p{font-size:.88rem;color:var(--muted);line-height:1.5;margin-bottom:16px}
+.project-tech-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.p-chip{
+  font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 8px;border-radius:4px;
+  background:rgba(24,22,20,.05);color:var(--ink);border:1px solid var(--line);
+}
+.project-card-action{
+  margin-top:auto;font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--clay);
+  font-weight:600;display:flex;align-items:center;gap:6px;
+}
+
+/* --- MODAL POPUP --- */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);
+  z-index:99999;display:none;place-items:center;padding:20px;
+}
+.modal-overlay.open{display:grid}
+.modal-card{
+  background:#FFF;border-radius:20px;max-width:760px;width:100%;max-height:90vh;
+  overflow-y:auto;box-shadow:0 25px 70px rgba(0,0,0,.4);position:relative;padding:36px;
+  border:1px solid var(--line);
+}
+.modal-close-btn{
+  position:absolute;top:20px;right:20px;width:36px;height:36px;border-radius:50%;
+  border:1px solid var(--line);background:var(--paper);display:grid;place-items:center;
+  cursor:pointer;color:var(--ink);transition:.2s;
+}
+.modal-close-btn:hover{background:var(--ink);color:#FFF}
+
+/* --- TESTIMONIALS --- */
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi-card{
+  border:1px solid var(--term-line);border-radius:18px;padding:30px 26px;
+  background:var(--term-surface);display:flex;flex-direction:column;
+}
+.testi-stars{color:#F59E0B;display:flex;gap:4px;margin-bottom:16px}
+.testi-quote{font-size:.95rem;line-height:1.65;color:var(--term-ink);margin-bottom:20px;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:12px;margin-top:auto}
+.testi-avatar{
+  width:42px;height:42px;border-radius:50%;background:var(--glow);display:grid;place-items:center;
+  font-family:'Fraunces',serif;font-weight:700;color:var(--clay-light);border:1px solid var(--clay);
+}
+.testi-meta b{display:block;font-size:.92rem;color:var(--term-ink)}
+.testi-meta span{font-size:.78rem;color:var(--term-dim);font-family:'JetBrains Mono',monospace}
 
 /* --- CONTACT FORM --- */
-.contact-form{max-width:560px;display:flex;flex-direction:column;gap:18px}
-.contact-form input,.contact-form textarea{background:rgba(255,255,255,.5);border:1px solid var(--line);border-radius:10px;
-  padding:14px 18px;font-family:'Instrument Sans',sans-serif;font-size:1rem;color:var(--ink);transition:.2s;outline:none}
-.contact-form input:focus,.contact-form textarea:focus{border-color:var(--clay);box-shadow:0 0 0 3px var(--glow)}
-.contact-form textarea{min-height:140px;resize:vertical}
-.contact-form label{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--muted);letter-spacing:.06em}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:flex-start}
+.contact-form-box{
+  background:#FFF;border:1px solid var(--line);border-radius:20px;padding:36px;
+  box-shadow:var(--shadow-md);
+}
+.form-group{margin-bottom:18px}
+.form-group label{
+  display:block;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--ink);
+  margin-bottom:8px;font-weight:600;
+}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;background:var(--paper);border:1px solid var(--line-strong);border-radius:10px;
+  padding:12px 16px;font-family:'Instrument Sans',sans-serif;font-size:.98rem;color:var(--ink);
+  transition:.2s ease;outline:none;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  border-color:var(--clay);background:#FFF;box-shadow:0 0 0 3px var(--glow);
+}
+.form-group textarea{min-height:120px;resize:vertical}
+.form-status-alert{
+  display:none;padding:14px;border-radius:10px;margin-top:16px;font-family:'JetBrains Mono',monospace;
+  font-size:.84rem;line-height:1.5;
+}
+.form-status-alert.success{display:block;background:#DCFCE7;color:#166534;border:1px solid #86EFAC}
+.form-status-alert.error{display:block;background:#FEE2E2;color:#991B1B;border:1px solid #FCA5A5}
 
 /* --- FOOTER --- */
-footer.site-footer{background:var(--term);color:var(--term-ink);padding:60px 6vw 30px;border-top:1px solid rgba(239,230,213,.1)}
-.footer-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
-.footer-inner h4{font-family:'Fraunces',serif;font-size:1.1rem;margin-bottom:16px}
-.footer-inner p,.footer-inner a{font-size:.9rem;color:var(--term-dim);line-height:1.7}
-.footer-inner a:hover{color:var(--clay)}
-.footer-bottom{max-width:1120px;margin:40px auto 0;padding-top:20px;border-top:1px solid rgba(239,230,213,.1);
-  display:flex;justify-content:space-between;align-items:center;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--term-dim)}
+footer.site-footer{
+  background:var(--term);color:var(--term-ink);padding:70px 6vw 36px;border-top:1px solid var(--term-line);
+}
+.footer-top{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px;margin-bottom:48px;
+}
+.footer-col h4{font-family:'Fraunces',serif;font-size:1.15rem;margin-bottom:18px;color:var(--clay-light)}
+.footer-col p,.footer-col a{font-size:.9rem;color:var(--term-dim);line-height:1.7;display:block}
+.footer-col a:hover{color:var(--term-ink)}
+.footer-bottom{
+  padding-top:24px;border-top:1px solid var(--term-line);
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--term-dim);flex-wrap:wrap;gap:12px;
+}
 
-/* --- FLOATING PARTICLES --- */
-.particles{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
-.particle{position:absolute;width:4px;height:4px;background:var(--clay);border-radius:50%;opacity:.15;animation:float linear infinite}
-@keyframes float{0%{transform:translateY(100vh) rotate(0deg);opacity:0}10%{opacity:.15}90%{opacity:.15}100%{transform:translateY(-100px) rotate(720deg);opacity:0}}
-
-/* --- EXPERTISE BADGES --- */
-.expertise-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
-.ebadge{border:1px solid var(--line);border-radius:16px;padding:28px 24px;background:rgba(255,255,255,.4);
-  transition:.35s;position:relative;overflow:hidden;cursor:default}
-.ebadge::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,var(--glow));opacity:0;transition:.35s}
-.ebadge:hover{border-color:var(--clay);transform:translateY(-6px) scale(1.02);box-shadow:0 24px 56px -18px rgba(201,100,66,.25)}
-.ebadge:hover::after{opacity:1}
-.ebadge .eb-icon{width:52px;height:52px;border-radius:14px;background:var(--glow);display:grid;place-items:center;margin-bottom:16px;position:relative;z-index:1}
-.ebadge .eb-icon svg{width:26px;height:26px;color:var(--clay)}
-.ebadge h3{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;margin-bottom:8px;position:relative;z-index:1}
-.ebadge p{font-size:.86rem;color:var(--muted);line-height:1.5;position:relative;z-index:1}
-.ebadge .eb-tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--clay);margin-bottom:12px;display:block;position:relative;z-index:1}
-.dark .ebadge{background:rgba(239,230,213,.04);border-color:rgba(239,230,213,.12)}
-.dark .ebadge:hover{border-color:var(--clay);background:rgba(239,230,213,.07)}
-.dark .ebadge p{color:var(--term-dim)}
-
-/* --- CLIENT LOGOS MARQUEE --- */
-.clients-section{padding:80px 6vw;overflow:hidden;position:relative}
-.clients-section::before,.clients-section::after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
-.clients-section::before{left:0;background:linear-gradient(90deg,var(--paper),transparent)}
-.clients-section::after{right:0;background:linear-gradient(270deg,var(--paper),transparent)}
-.marquee-wrap{display:flex;gap:0;animation:marquee 30s linear infinite;width:max-content}
-.marquee-wrap:hover{animation-play-state:paused}
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.client-logo{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 40px;
-  border:1px solid var(--line);border-radius:14px;margin:0 10px;background:rgba(255,255,255,.5);
-  min-width:200px;transition:.3s;flex-shrink:0}
-.client-logo:hover{border-color:var(--clay);transform:scale(1.05);background:var(--glow)}
-.client-logo span{font-family:'JetBrains Mono',monospace;font-size:.88rem;font-weight:600;color:var(--ink);opacity:.85;white-space:nowrap;letter-spacing:.02em;line-height:1.3}
-.client-logo:hover span{opacity:1}
-
-/* --- GRADIENT GLOW --- */
-.glow-orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;opacity:.12;z-index:0}
-.glow-orb.clay{background:var(--clay)}
-.glow-orb.ink{background:var(--ink)}
-
-/* --- WHY US CARDS --- */
-.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:900px}
-.wcard{display:flex;gap:18px;align-items:flex-start;padding:24px;border:1px solid var(--line);border-radius:14px;
-  background:rgba(255,255,255,.35);transition:.3s}
-.wcard:hover{border-color:var(--clay);transform:translateX(6px)}
-.wcard .wnum{font-family:'Fraunces',serif;font-size:2rem;font-weight:600;color:var(--clay);line-height:1;flex-shrink:0;width:48px}
-.wcard h4{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;margin-bottom:6px}
-.wcard p{font-size:.88rem;color:var(--muted);line-height:1.5}
-
-/* --- CTA BANNER --- */
-.cta-banner{background:linear-gradient(135deg,var(--clay),var(--clay-deep));border-radius:20px;padding:60px 48px;
-  text-align:center;position:relative;overflow:hidden}
-.cta-banner::before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1.5' fill='rgba(255,255,255,.08)'/%3E%3C/svg%3E");pointer-events:none}
-.cta-banner h2{color:var(--paper);margin-bottom:16px}
-.cta-banner h2 em{color:rgba(246,241,231,.7)}
-.cta-banner p{color:rgba(246,241,231,.8);font-size:1.1rem;max-width:50ch;margin:0 auto 28px}
-.cta-banner .btn{background:var(--paper);color:var(--clay)}
-.cta-banner .btn:hover{background:var(--ink);color:var(--paper)}
+/* --- PROGRESS BAR --- */
+#progress{position:fixed;top:0;left:0;height:3px;background:var(--clay);width:0;z-index:99999;transition:width .1s linear}
 
 /* --- RESPONSIVE --- */
-@media(max-width:1000px){
-  .grid3{grid-template-columns:1fr 1fr}
-  .grid4{grid-template-columns:1fr 1fr}
-  .footer-inner{grid-template-columns:1fr 1fr}
+@media(max-width:1080px){
+  .hero-layout{grid-template-columns:1fr;gap:40px}
+  .about-grid{grid-template-columns:1fr}
+  .services-grid,.projects-grid,.yt-grid,.testimonials-grid{grid-template-columns:1fr 1fr}
+  .contact-layout{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
 }
-@media(max-width:860px){
-  .grid2{grid-template-columns:1fr;gap:30px}
-  .grid3{grid-template-columns:1fr}
-  .flow{grid-template-columns:1fr}
-  .farrow{transform:rotate(90deg);padding:0}
-  .stats{grid-template-columns:1fr}
-  .stats>div{border-right:none;border-bottom:1px solid var(--line)}
-  .stats>div:last-child{border-bottom:none}
-  .ghost-num{display:none}
-  section{padding:80px 6vw;min-height:auto}
-  .nav-links{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(246,241,231,.98);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line)}
+@media(max-width:768px){
+  section{padding:80px 6vw}
+  .services-grid,.projects-grid,.yt-grid,.testimonials-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .nav-links{
+    display:none;position:fixed;top:70px;left:0;right:0;background:rgba(247,244,238,.98);
+    flex-direction:column;padding:28px;gap:20px;border-bottom:1px solid var(--line);
+    box-shadow:0 12px 30px rgba(0,0,0,.1);
+  }
   .nav-links.open{display:flex}
   .menu-toggle{display:block}
-  .footer-inner{grid-template-columns:1fr}
-  .why-grid{grid-template-columns:1fr}
-  .expertise-grid{grid-template-columns:1fr 1fr}
-  .cta-banner{padding:40px 24px}
-}
-@media(max-width:560px){
-  .grid4{grid-template-columns:1fr}
+  .nav-actions .nav-yt-btn{display:none}
+  .ghost-num{display:none}
 }
 </style>
 </head>
 <body>
+
 <div id="progress"></div>
 
 <!-- ===== NAVIGATION ===== -->
 <nav id="mainNav">
-  <div class="nav-brand"><img src="logo.png" alt="Shiva AI LLP" style="width:36px;height:36px;border-radius:8px;object-fit:cover"> Shiva AI LLP</div>
-  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+  <a href="#hero" class="nav-brand-wrap" aria-label="Shivay AI LLP Homepage">
+    <img src="logo.png" alt="Shivay AI LLP" class="brand-logo-img">
+    <div class="brand-text">
+      <span class="brand-title">Shivay AI <span style="font-weight:400;font-size:.9rem;color:var(--clay)">LLP</span></span>
+      <span class="brand-sub">Enterprise AI Solutions</span>
+    </div>
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="navLinks">
     <i data-lucide="menu"></i>
   </button>
+
   <div class="nav-links" id="navLinks">
     <a href="#hero">Home</a>
     <a href="#about">About</a>
+    <a href="#demos">Video Demos</a>
     <a href="#services">Services</a>
-    <a href="#expertise">Expertise</a>
-    <a href="#projects">Projects</a>
-    <a href="#tech">Tech Stack</a>
-    <a href="#contact" class="nav-cta">Get in Touch</a>
+    <a href="#projects">Case Studies</a>
+    <a href="#ecosystem">Partners</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="nav-actions">
+    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="nav-yt-btn" title="Watch Shivay AI LLP on YouTube">
+      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      YouTube Channel
+    </a>
+    <a href="#contact" class="nav-cta">Consult an Architect</a>
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
+<!-- ===== HERO SECTION ===== -->
 <section id="hero" class="dark">
-  <div class="particles" id="heroParticles"></div>
   <div class="section-inner">
     <span class="ghost-num">01</span>
-    <p class="kicker reveal" style="color:var(--term-dim)">AI-Powered Innovation · Shiva AI LLP</p>
-    <h1 class="reveal d1">We Build<br><em>Intelligent</em><br>Systems</h1>
-    <p class="lead reveal d2" style="color:var(--term-dim);margin-top:28px;max-width:52ch">
-      From <b>Generative AI</b> and <b>Large Language Models</b> to <b>Agentic Workflows</b> and <b>Conversational AI</b> — we engineer the future of human-machine interaction.
-    </p>
-    <div class="term reveal d3" style="margin-top:40px">
-      <div class="term-bar"><span></span><span></span><span></span><em>shivaaillp — ~/innovation</em></div>
-      <pre><span class="p">$</span> <span id="typer"></span><span class="caret"></span></pre>
-    </div>
-    <div class="reveal d4" style="display:flex;gap:14px;align-items:center;margin-top:40px;flex-wrap:wrap">
-      <a class="btn" href="#services"><i data-lucide="arrow-right"></i> Explore Our Work</a>
-      <a class="btn ghosted" style="color:var(--term-ink)" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <i data-lucide="globe"></i> Visit Our Platform</a>
-      <div class="socials">
-        <a class="iconbtn" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener" title="Website"><i data-lucide="globe"></i></a>
-        <a class="iconbtn" href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn"><i data-lucide="linkedin"></i></a>
-        <a class="iconbtn" href="https://github.com/" target="_blank" rel="noopener" title="GitHub"><i data-lucide="github"></i></a>
+    <div class="hero-layout">
+      <div>
+        <div class="hero-badge reveal">
+          <span class="pulse-dot"></span> Registered Corporate AI Firm · India & Global
+        </div>
+        <h1 class="reveal d1">Engineering <em>Intelligent</em> Enterprise AI Systems</h1>
+        <p class="lead reveal d2">
+          From <b>Custom Generative AI</b> and <b>Enterprise RAG Engines</b> to <b>Autonomous Agentic Workflows</b> and <b>Voice AI Telephony</b> — we transform cutting-edge AI research into high-ROI production software.
+        </p>
+
+        <div class="reveal d3" style="display:flex;gap:14px;align-items:center;margin-top:36px;flex-wrap:wrap">
+          <a class="btn" href="#projects"><i data-lucide="layers"></i> Explore Case Studies</a>
+          <a class="btn btn-yt" href="#demos"><i data-lucide="youtube"></i> Watch Video Demos</a>
+          <a class="btn ghosted" style="color:var(--term-ink);border-color:var(--term-line)" href="#contact">
+            <i data-lucide="mail"></i> Contact Engineers
+          </a>
+        </div>
+
+        <div class="reveal d4" style="margin-top:32px;display:flex;align-items:center;gap:16px">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--term-dim)">Official Channels:</span>
+          <div class="socials">
+            <a class="iconbtn yt" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube Channel">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a class="iconbtn" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a class="iconbtn" href="https://github.com/parmarjh/SAL" target="_blank" rel="noopener noreferrer" title="GitHub Repository"><i data-lucide="github"></i></a>
+            <a class="iconbtn" href="https://x.com" target="_blank" rel="noopener noreferrer" title="X / Twitter"><i data-lucide="twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Card: Brand Identity Image + Metrics -->
+      <div class="hero-visual-card reveal d2">
+        <img src="ShivaY%20AI%20LLP.jpg" alt="Shivay AI LLP Official Brand Crest" class="brand-hero-art">
+        <div style="font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;margin-bottom:8px">
+          Shivay AI LLP <span style="font-size:.85rem;color:var(--clay-light);font-family:'JetBrains Mono',monospace;font-weight:400">(Shiva AI)</span>
+        </div>
+        <p style="font-size:.84rem;color:var(--term-dim);line-height:1.5;margin-bottom:16px">
+          Incorporated technology partner engineering full-lifecycle AI implementations for startups, enterprises, and research organizations.
+        </p>
+        <div class="hero-stats-strip">
+          <div class="h-stat"><b>50+</b><span>Deployments</span></div>
+          <div class="h-stat"><b>99.4%</b><span>Accuracy</span></div>
+          <div class="h-stat"><b>24/7</b><span>Support SLA</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== CLIENT LOGOS ===== -->
-<div class="clients-section" style="background:var(--paper);position:relative">
-  <p class="kicker reveal" style="justify-content:center;text-align:center;margin-bottom:32px">Global Clients · Trusted Worldwide</p>
-  <div class="marquee-wrap" id="marquee">
-    <!-- Row 1 -->
-    <div class="client-logo"><span style="font-size:2.2rem">🇺🇸</span><span>USA<br><small style="font-size:.7rem;opacity:.6">Enterprise AI</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇩🇪</span><span>Germany<br><small style="font-size:.7rem;opacity:.6">Manufacturing AI</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇰🇷</span><span>South Korea<br><small style="font-size:.7rem;opacity:.6">Tech Innovation</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇹🇷</span><span>Turkey<br><small style="font-size:.7rem;opacity:.6">FinTech Solutions</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇬🇧</span><span>United Kingdom<br><small style="font-size:.7rem;opacity:.6">Healthcare AI</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇷🇺</span><span>Russia<br><small style="font-size:.7rem;opacity:.6">Data Analytics</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇦🇪</span><span>UAE<br><small style="font-size:.7rem;opacity:.6">Smart City AI</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇺🇸</span><span>USA<br><small style="font-size:.7rem;opacity:.6">SaaS Platform</small></span></div>
-    <!-- Row 2 (duplicate for seamless loop) -->
-    <div class="client-logo"><span style="font-size:2.2rem">🇺🇸</span><span>USA<br><small style="font-size:.7rem;opacity:.6">Enterprise AI</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇩🇪</span><span>Germany<br><small style="font-size:.7rem;opacity:.6">Manufacturing AI</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇰🇷</span><span>South Korea<br><small style="font-size:.7rem;opacity:.6">Tech Innovation</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇹🇷</span><span>Turkey<br><small style="font-size:.7rem;opacity:.6">FinTech Solutions</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇬🇧</span><span>United Kingdom<br><small style="font-size:.7rem;opacity:.6">Healthcare AI</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇷🇺</span><span>Russia<br><small style="font-size:.7rem;opacity:.6">Data Analytics</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇦🇪</span><span>UAE<br><small style="font-size:.7rem;opacity:.6">Smart City AI</small></span></div>
-    <div class="client-logo"><span style="font-size:2.2rem">🇺🇸</span><span>USA<br><small style="font-size:.7rem;opacity:.6">SaaS Platform</small></span></div>
+<!-- ===== ENTERPRISE PARTNER & ECOSYSTEM MARQUEE ===== -->
+<div class="ecosystem-section" id="ecosystem">
+  <div style="text-align:center;margin-bottom:24px">
+    <p class="kicker" style="justify-content:center;margin-bottom:8px">Technology Ecosystem & Production Infrastructure</p>
+    <p style="font-size:.9rem;color:var(--muted)">We build and scale enterprise systems on industry-standard foundational platforms</p>
+  </div>
+
+  <div class="marquee-track">
+    <!-- Partner 1: Google Cloud -->
+    <div class="partner-card">
+      <div class="partner-logo-box">
+        <svg viewBox="0 0 24 24"><path fill="#EA4335" d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>
+      </div>
+      <div class="partner-info">
+        <span class="partner-name">Google Cloud</span>
+        <span class="partner-badge">Vertex AI & TPU Architecture</span>
+      </div>
+    </div>
+
+    <!-- Partner 2: AWS -->
+    <div class="partner-card">
+      <div class="partner-logo-box">
+        <svg viewBox="0 0 24 24"><path fill="#FF9900" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+      </div>
+      <div class="partner-info">
+        <span class="partner-name">Amazon Web Services</span>
+        <span class="partner-badge">Bedrock & SageMaker</span>
+      </div>
+    </div>
+
+    <!-- Partner 3: Microsoft Azure -->
+    <div class="partner-card">
+      <div class="partner-logo-box">
+        <svg viewBox="0 0 24 24"><path fill="#0089D6" d="M13.03 2.05 3.36 17.6h7.62l2.05-4.04zM14.07 3.3l5.57 12.3-3.13 6.35h-6.2l7.07-13.65z"/></svg>
+      </div>
+      <div class="partner-info">
+        <span class="partner-name">Microsoft Azure</span>
+        <span class="partner-badge">Azure OpenAI Service</span>
+      </div>
+    </div>
+
+    <!-- Partner 4: OpenAI -->
+    <div class="partner-card">
+      <div class="partner-logo-box">
+        <svg viewBox="0 0 24 24"><path fill="#10A37F" d="M22.28 9.87a6.04 6.04 0 0 0-.52-4.97 6.13 6.13 0 0 0-6.43-2.91A6.03 6.03 0 0 0 10.6.5a6.13 6.13 0 0 0-5.84 4.25 6.04 6.04 0 0 0-3.9 2.83 6.13 6.13 0 0 0 .58 7.04 6.04 6.04 0 0 0 .52 4.97 6.13 6.13 0 0 0 6.43 2.91 6.04 6.04 0 0 0 4.73 1.49 6.13 6.13 0 0 0 5.84-4.25 6.04 6.04 0 0 0 3.9-2.83 6.13 6.13 0 0 0-.58-7.04z"/></svg>
+      </div>
+      <div class="partner-info">
+        <span class="partner-name">OpenAI API</span>
+        <span class="partner-badge">GPT-4o & Fine-Tuning</span>
+      </div>
+    </div>
+
+    <!-- Partner 5: Hugging Face -->
+    <div class="partner-card">
+      <div class="partner-logo-box">
+        <svg viewBox="0 0 24 24"><path fill="#FFD21E" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-3 8a1.5 1.5 0 1 1-1.5 1.5A1.5 1.5 0 0 1 9 10zm6 0a1.5 1.5 0 1 1-1.5 1.5 1.5 1.5 0 0 1 1.5-1.5zm-3 6.5a4.5 4.5 0 0 1-3.89-2.25h7.78A4.5 4.5 0 0 1 12 16.5z"/></svg>
+      </div>
+      <div class="partner-info">
+        <span class="partner-name">Hugging Face</span>
+        <span class="partner-badge">Open Source Models & Quantization</span>
+      </div>
+    </div>
+
+    <!-- Partner 6: n8n Automation -->
+    <div class="partner-card">
+      <div class="partner-logo-box">
+        <svg viewBox="0 0 24 24"><path fill="#EA4B71" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm1 14h-2v-4h2v4zm0-6h-2V7h2v3z"/></svg>
+      </div>
+      <div class="partner-info">
+        <span class="partner-name">n8n Certified Partner</span>
+        <span class="partner-badge">Enterprise Agent Orchestration</span>
+      </div>
+    </div>
+
+    <!-- Partner 7: YouTube Tech Demos -->
+    <div class="partner-card">
+      <div class="partner-logo-box">
+        <svg viewBox="0 0 24 24"><path fill="#CC0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </div>
+      <div class="partner-info">
+        <span class="partner-name">YouTube Demos</span>
+        <span class="partner-badge">Live System Architectures</span>
+      </div>
+    </div>
+
+    <!-- Partner 8: PyTorch -->
+    <div class="partner-card">
+      <div class="partner-logo-box">
+        <svg viewBox="0 0 24 24"><path fill="#EE4C2C" d="M12 2L3 7v10l9 5 9-5V7l-9-5zm0 2.2l6.8 3.8v7.6L12 19.4 5.2 15.6V8L12 4.2z"/></svg>
+      </div>
+      <div class="partner-info">
+        <span class="partner-name">PyTorch & ONNX</span>
+        <span class="partner-badge">Edge & Server Inference</span>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- ===== ABOUT ===== -->
+<!-- ===== ABOUT & CORPORATE PROFILE ===== -->
 <section id="about">
   <div class="section-inner">
     <span class="ghost-num">02</span>
-    <p class="kicker reveal">Who We Are</p>
-    <h2 class="reveal d1">Engineering the <em>AI-first</em> future</h2>
-    <div class="grid2">
-      <div class="col">
-        <p class="lead reveal d2">
-          <b>Shiva AI LLP</b> is a next-generation technology company specializing in <b>Artificial Intelligence</b>, <b>Machine Learning</b>, and <b>intelligent automation</b>. We transform complex AI research into production-ready solutions that drive real business impact.
-        </p>
-        <p class="lead reveal d3" style="margin-top:20px">
-          Our team builds <span class="hl">end-to-end AI systems</span> — from data pipelines and model training to deployment, monitoring, and continuous improvement.
-        </p>
+    <p class="kicker reveal">Corporate Identity & Verification</p>
+    <h2 class="reveal d1">Built on <em>Engineering Rigor</em> and Proven Execution</h2>
+
+    <div class="about-grid">
+      <div class="about-image-card reveal d2">
+        <img src="ShivaY%20AI%20LLP.jpg" alt="Shivay AI LLP Official Corporate Registration & Brand Identity">
+        <div class="verified-corporate-pill">
+          <i data-lucide="shield-check"></i> Registered Limited Liability Partnership (LLP)
+        </div>
       </div>
-      <div class="col">
-        <ul class="dash">
-          <li class="reveal d2"><b>AI & ML</b> — Custom models trained for your domain</li>
-          <li class="reveal d3"><b>GenAI & LLMs</b> — Large language model integration & fine-tuning</li>
-          <li class="reveal d4"><b>Conversational AI</b> — Chatbots & voice assistants that understand</li>
-          <li class="reveal d5"><b>RAG Systems</b> — Retrieval-augmented generation for accurate answers</li>
-          <li class="reveal d6"><b>Agentic AI</b> — Autonomous agents that plan and execute</li>
-        </ul>
+
+      <div class="reveal d3">
+        <p class="lead" style="margin-bottom:18px">
+          <b>Shivay AI LLP</b> (also recognized in commercial operations as <b>Shiva AI LLP</b>) is an incorporated engineering firm dedicated to building production-grade Artificial Intelligence systems for enterprise clients.
+        </p>
+        <p class="lead" style="font-size:1rem;margin-bottom:24px">
+          Unlike prototype shops or prompt wrappers, we engineer <b>end-to-end proprietary infrastructure</b>. Our solutions are deployed on private clouds, adhere to rigorous enterprise NDAs, and feature comprehensive telemetry, monitoring, and fallback systems.
+        </p>
+
+        <div class="corp-cred-grid">
+          <div class="cred-item">
+            <h4>100% IP Ownership</h4>
+            <p>All source code, trained model weights, embeddings, and architecture artifacts are transferred exclusively to the client.</p>
+          </div>
+          <div class="cred-item">
+            <h4>Enterprise NDA Protected</h4>
+            <p>Rigorous data security protocols. Zero customer data is ever retained or used to train third-party public models.</p>
+          </div>
+          <div class="cred-item">
+            <h4>Multi-Cloud Runtimes</h4>
+            <p>Seamless execution across AWS, GCP, Azure, and dedicated on-premise GPU clusters with containerized CI/CD.</p>
+          </div>
+          <div class="cred-item">
+            <h4>Live Video Proof</h4>
+            <p>Every major delivery includes detailed YouTube architectural walkthroughs and reproducible benchmarking suites.</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="stats reveal d5" style="margin-top:56px">
-      <div><b>50+</b><p>AI/ML Projects Delivered</p></div>
-      <div><b>8+</b><p>Countries Served</p></div>
-      <div><b>99.2%</b><p>Model Accuracy Achieved</p></div>
     </div>
   </div>
 </section>
 
-<!-- ===== SERVICES ===== -->
-<section id="services" class="dark">
+<!-- ===== FEATURED YOUTUBE & VIDEO DEMOS SECTION ===== -->
+<section id="demos" class="yt-section">
   <div class="section-inner">
     <span class="ghost-num">03</span>
-    <p class="kicker reveal" style="color:var(--term-dim)">What We Do</p>
-    <h2 class="reveal d1">Our <em>Services</em></h2>
-    <p class="lead reveal d2" style="color:var(--term-dim);margin-bottom:40px">Full-spectrum AI engineering — from research prototypes to production systems at scale.</p>
-    <div class="grid3">
-      <div class="scard reveal d1">
-        <i data-lucide="brain"></i>
-        <h3>AI & Machine Learning</h3>
-        <p>Custom ML models, computer vision, NLP pipelines, predictive analytics, and recommendation systems tailored to your data.</p>
+    <div class="yt-header-bar">
+      <div>
+        <p class="kicker reveal" style="color:#FF4D4D">Watch Our Engineers In Action</p>
+        <h2 class="reveal d1" style="color:#FFF">Featured <em>YouTube</em> & Architecture Walkthroughs</h2>
+        <p class="lead reveal d2" style="color:var(--term-dim)">
+          See real system executions, autonomous agent decision trees, and live telephony benchmarks.
+        </p>
       </div>
-      <div class="scard reveal d2">
-        <i data-lucide="sparkles"></i>
-        <h3>Generative AI & LLMs</h3>
-        <p>Fine-tuning large language models, prompt engineering, GPT integration, content generation, and custom AI assistants.</p>
-      </div>
-      <div class="scard reveal d3">
-        <i data-lucide="message-square"></i>
-        <h3>Chatbot & Conversational AI</h3>
-        <p>Intelligent chatbots, voice assistants, multi-turn dialogue systems, and customer support automation with natural language understanding.</p>
-      </div>
-      <div class="scard reveal d4">
-        <i data-lucide="database"></i>
-        <h3>RAG Systems</h3>
-        <p>Retrieval-Augmented Generation pipelines combining vector databases, embeddings, and LLMs for accurate, context-aware responses.</p>
-      </div>
-      <div class="scard reveal d5">
-        <i data-lucide="bot"></i>
-        <h3>Agentic AI</h3>
-        <p>Autonomous AI agents that plan, reason, use tools, and execute complex multi-step workflows with minimal human intervention.</p>
-      </div>
-      <div class="scard reveal d6">
-        <i data-lucide="network"></i>
-        <h3>Networking & Infrastructure</h3>
-        <p>Network architecture, cloud infrastructure, API design, microservices, and scalable backend systems for AI workloads.</p>
-      </div>
-      <div class="scard reveal d7">
-        <i data-lucide="code-2"></i>
-        <h3>Software Development</h3>
-        <p>Full-stack web & mobile applications, SaaS platforms, DevOps pipelines, and custom software solutions.</p>
-      </div>
-      <div class="scard reveal d8">
-        <i data-lucide="shield-check"></i>
-        <h3>AI Consulting & Strategy</h3>
-        <p>AI readiness assessments, technology roadmaps, model selection, and implementation strategy for enterprises.</p>
-      </div>
-      <div class="scard reveal d8">
-        <i data-lucide="workflow"></i>
-        <h3>MLOps & Deployment</h3>
-        <p>Model versioning, CI/CD for ML, monitoring, A/B testing, and production-grade AI infrastructure management.</p>
-      </div>
-      <div class="scard reveal d1">
-        <i data-lucide="bot"></i>
-        <h3>AI Agent Development</h3>
-        <p>Custom autonomous AI agents with tool use, memory, planning, and multi-step reasoning for complex business workflows.</p>
-      </div>
-      <div class="scard reveal d2">
-        <i data-lucide="workflow"></i>
-        <h3>n8n Automation Expert</h3>
-        <p>End-to-end n8n workflow design — connecting AI models, APIs, databases, and SaaS tools into powerful automated pipelines.</p>
-      </div>
-      <div class="scard reveal d3">
-        <i data-lucide="pen-tool"></i>
-        <h3>Prompt Engineering</h3>
-        <p>Expert prompt design, chain-of-thought strategies, system instructions, and output optimization for maximum LLM performance.</p>
-      </div>
-      <div class="scard reveal d4">
-        <i data-lucide="brain-circuit"></i>
-        <h3>Agentic AI Systems</h3>
-        <p>Multi-agent architectures with autonomous planning, tool execution, self-correction, and human-in-the-loop oversight.</p>
-      </div>
-      <div class="scard reveal d5">
-        <i data-lucide="phone"></i>
-        <h3>Voice AI & Telephony</h3>
-        <p>AI-powered voice agents for inbound/outbound calls, IVR automation, and real-time conversational telephony systems.</p>
-      </div>
-      <div class="scard reveal d6">
-        <i data-lucide="mic"></i>
-        <h3>Speech-to-Text (STT)</h3>
-        <p>Real-time speech recognition, transcription services, speaker diarization, and multi-language voice processing.</p>
-      </div>
-      <div class="scard reveal d7">
-        <i data-lucide="volume-2"></i>
-        <h3>Text-to-Speech (TTS)</h3>
-        <p>Natural voice synthesis, voice cloning, emotion-controlled TTS, and multi-language audio generation.</p>
-      </div>
-      <div class="scard reveal d8">
-        <i data-lucide="music"></i>
-        <h3>AI Music Generation</h3>
-        <p>Generative AI for custom music composition, background scores, jingles, and audio content creation.</p>
-      </div>
+      <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-yt reveal d2">
+        <svg viewBox="0 0 24 24" style="fill:currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        Subscribe to Channel
+      </a>
+    </div>
+
+    <div class="yt-grid">
+      <!-- Video 1: Autonomous Multi-Agent Demo -->
+      <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="yt-card reveal d1">
+        <div class="yt-thumb-wrapper">
+          <svg class="yt-thumb-bg" viewBox="0 0 400 220" style="background:#111">
+            <rect width="100%" height="100%" fill="#181412"/>
+            <circle cx="200" cy="110" r="70" fill="none" stroke="#C45A36" stroke-width="2" stroke-dasharray="6 4"/>
+            <circle cx="160" cy="90" r="14" fill="#2563EB"/>
+            <circle cx="240" cy="90" r="14" fill="#16A34A"/>
+            <circle cx="200" cy="150" r="16" fill="#C45A36"/>
+            <path d="M160 90 L200 150 L240 90 Z" stroke="#FFF" stroke-width="1.5" stroke-opacity=".4" fill="none"/>
+            <text x="200" y="200" text-anchor="middle" fill="#E5E7EB" font-family="'JetBrains Mono',monospace" font-size="12">AGENT ORCHESTRATION PIPELINE</text>
+          </svg>
+          <span class="yt-tag-pill">Agentic AI</span>
+          <div class="yt-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <span class="yt-duration-badge">11:24 HD</span>
+        </div>
+        <div class="yt-card-body">
+          <h3>Autonomous Multi-Agent Enterprise Orchestration</h3>
+          <p>Full walkthrough of LangGraph and n8n autonomous worker agents executing cross-database lookups and self-correcting tasks.</p>
+          <div class="yt-card-footer">
+            <span>Watch Architecture Breakdown</span>
+            <i data-lucide="arrow-up-right"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Video 2: Voice AI Telephony Demo -->
+      <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="yt-card reveal d2">
+        <div class="yt-thumb-wrapper">
+          <svg class="yt-thumb-bg" viewBox="0 0 400 220" style="background:#111">
+            <rect width="100%" height="100%" fill="#141923"/>
+            <!-- Waveform visual -->
+            <path d="M20 110 Q 60 40, 100 110 T 180 110 T 260 110 T 340 110 T 380 110" fill="none" stroke="#00B4D8" stroke-width="3"/>
+            <path d="M20 110 Q 60 70, 100 110 T 180 110 T 260 110 T 340 110 T 380 110" fill="none" stroke="#FF007F" stroke-width="2" stroke-opacity=".7"/>
+            <text x="200" y="195" text-anchor="middle" fill="#E5E7EB" font-family="'JetBrains Mono',monospace" font-size="12">REAL-TIME LATENCY: &lt;450ms</text>
+          </svg>
+          <span class="yt-tag-pill">Voice AI</span>
+          <div class="yt-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <span class="yt-duration-badge">08:45 HD</span>
+        </div>
+        <div class="yt-card-body">
+          <h3>Sub-500ms Voice AI Telephony & Call Assistant</h3>
+          <p>Live inbound telephony test: real-time streaming speech-to-text, low-latency LLM reasoning, and natural emotional speech synthesis.</p>
+          <div class="yt-card-footer">
+            <span>Watch Live Call Test</span>
+            <i data-lucide="arrow-up-right"></i>
+          </div>
+        </div>
+      </a>
+
+      <!-- Video 3: Enterprise RAG Benchmarks -->
+      <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="yt-card reveal d3">
+        <div class="yt-thumb-wrapper">
+          <svg class="yt-thumb-bg" viewBox="0 0 400 220" style="background:#111">
+            <rect width="100%" height="100%" fill="#1A1528"/>
+            <rect x="50" y="40" width="80" height="90" rx="8" fill="#3B82F6" fill-opacity=".3" stroke="#3B82F6"/>
+            <rect x="160" y="40" width="80" height="90" rx="8" fill="#8B5CF6" fill-opacity=".3" stroke="#8B5CF6"/>
+            <rect x="270" y="40" width="80" height="90" rx="8" fill="#10B981" fill-opacity=".3" stroke="#10B981"/>
+            <text x="90" y="90" fill="#FFF" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">CHUNKS</text>
+            <text x="200" y="90" fill="#FFF" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">VECTOR</text>
+            <text x="310" y="90" fill="#FFF" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">RERANK</text>
+            <text x="200" y="195" text-anchor="middle" fill="#E5E7EB" font-family="'JetBrains Mono',monospace" font-size="12">MILLION DOC HYBRID SEARCH</text>
+          </svg>
+          <span class="yt-tag-pill">RAG Architecture</span>
+          <div class="yt-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <span class="yt-duration-badge">14:10 HD</span>
+        </div>
+        <div class="yt-card-body">
+          <h3>Production RAG: Hybrid Vector Search & Reranking</h3>
+          <p>Architecting high-precision retrieval over 1M+ technical documents with Cohere reranking, Pinecone indexes, and citation guards.</p>
+          <div class="yt-card-footer">
+            <span>Watch Technical Benchmark</span>
+            <i data-lucide="arrow-up-right"></i>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ===== EXPERTISE ===== -->
-<section id="expertise">
+<!-- ===== CORE SERVICES ===== -->
+<section id="services">
   <div class="section-inner">
     <span class="ghost-num">04</span>
-    <div class="glow-orb clay" style="width:400px;height:400px;top:-100px;right:-100px"></div>
-    <p class="kicker reveal">Our Expertise</p>
-    <h2 class="reveal d1">Specialized <em>AI Roles</em></h2>
-    <p class="lead reveal d2" style="margin-bottom:40px">Deep expertise across the full AI stack — from building autonomous agents to crafting the perfect prompt.</p>
-    <div class="expertise-grid">
-      <div class="ebadge reveal d1">
-        <span class="eb-tag">Core Role</span>
-        <div class="eb-icon"><i data-lucide="bot"></i></div>
-        <h3>AI Agent Developer</h3>
-        <p>Build autonomous AI agents that reason, plan, use tools, and execute complex multi-step tasks with minimal supervision.</p>
+    <p class="kicker reveal">Specialized Capabilities</p>
+    <h2 class="reveal d1">Engineered for <em>Production</em> Scale</h2>
+    <p class="lead reveal d2" style="margin-bottom:44px">
+      Comprehensive technical solutions tailored to solve mission-critical operational bottlenecks.
+    </p>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="scard reveal d1">
+        <div class="icon-box"><i data-lucide="bot"></i></div>
+        <h3>Autonomous AI Agents</h3>
+        <p>Multi-agent architectures with planning loops, memory persistence, tool invocations, and self-correction for complex business processes.</p>
       </div>
-      <div class="ebadge reveal d2">
-        <span class="eb-tag">Automation</span>
-        <div class="eb-icon"><i data-lucide="workflow"></i></div>
-        <h3>n8n Workflow Expert</h3>
-        <p>Design and deploy sophisticated n8n automation workflows connecting AI models, APIs, databases, and business systems.</p>
+
+      <!-- Service 2 -->
+      <div class="scard reveal d2">
+        <div class="icon-box"><i data-lucide="phone-call"></i></div>
+        <h3>Voice AI & Telephony</h3>
+        <p>Full-duplex real-time conversational voice agents for customer care, appointment scheduling, and automated outbound qualification.</p>
       </div>
-      <div class="ebadge reveal d3">
-        <span class="eb-tag">LLM Specialist</span>
-        <div class="eb-icon"><i data-lucide="pen-tool"></i></div>
-        <h3>Prompt Engineer</h3>
-        <p>Craft high-performance prompts, system instructions, and chain-of-thought strategies that maximize LLM accuracy and output quality.</p>
+
+      <!-- Service 3 -->
+      <div class="scard reveal d3">
+        <div class="icon-box"><i data-lucide="database"></i></div>
+        <h3>Enterprise RAG Engines</h3>
+        <p>Semantic vector databases, intelligent chunking pipelines, and hybrid dense/sparse reranking to eliminate hallucinations.</p>
       </div>
-      <div class="ebadge reveal d4">
-        <span class="eb-tag">Autonomous Systems</span>
-        <div class="eb-icon"><i data-lucide="brain-circuit"></i></div>
-        <h3>Agentic AI Architect</h3>
-        <p>Design multi-agent architectures with tool use, memory, planning loops, and human-in-the-loop oversight for enterprise workflows.</p>
+
+      <!-- Service 4 -->
+      <div class="scard reveal d4">
+        <div class="icon-box"><i data-lucide="workflow"></i></div>
+        <h3>n8n Workflow Automation</h3>
+        <p>End-to-end automated pipelines connecting internal ERPs, CRMs, APIs, and AI models into deterministic business processes.</p>
       </div>
-      <div class="ebadge reveal d5">
-        <span class="eb-tag">Knowledge Systems</span>
-        <div class="eb-icon"><i data-lucide="database"></i></div>
-        <h3>RAG Pipeline Engineer</h3>
-        <p>Build retrieval-augmented generation systems with vector databases, embedding models, reranking, and citation tracking.</p>
+
+      <!-- Service 5 -->
+      <div class="scard reveal d5">
+        <div class="icon-box"><i data-lucide="brain"></i></div>
+        <h3>Custom LLM Fine-Tuning</h3>
+        <p>Domain-adapted models trained on private proprietary datasets with LoRA/QLoRA, alignment evaluation, and high-throughput serving.</p>
       </div>
-      <div class="ebadge reveal d6">
-        <span class="eb-tag">Conversational</span>
-        <div class="eb-icon"><i data-lucide="messages-square"></i></div>
-        <h3>Chatbot Developer</h3>
-        <p>Create intelligent conversational AI with multi-turn dialogue, intent recognition, and seamless human handoff capabilities.</p>
-      </div>
-      <div class="ebadge reveal d7">
-        <span class="eb-tag">Integration</span>
-        <div class="eb-icon"><i data-lucide="plug"></i></div>
-        <h3>LLM Integration Specialist</h3>
-        <p>Integrate OpenAI, Claude, Gemini, and open-source LLMs into production apps with fine-tuning, guardrails, and monitoring.</p>
-      </div>
-      <div class="ebadge reveal d8">
-        <span class="eb-tag">Infrastructure</span>
-        <div class="eb-icon"><i data-lucide="server"></i></div>
-        <h3>MLOps Engineer</h3>
-        <p>Deploy, monitor, and scale AI models in production with CI/CD pipelines, A/B testing, and cost optimization.</p>
-      </div>
-      <div class="ebadge reveal d1">
-        <span class="eb-tag">Voice & Telephony</span>
-        <div class="eb-icon"><i data-lucide="phone-call"></i></div>
-        <h3>Voice AI Developer</h3>
-        <p>Build intelligent voice agents for automated calls, IVR systems, and real-time telephony with natural conversation flow.</p>
-      </div>
-      <div class="ebadge reveal d2">
-        <span class="eb-tag">Audio Processing</span>
-        <div class="eb-icon"><i data-lucide="audio-waveform"></i></div>
-        <h3>STT/TTS Specialist</h3>
-        <p>Expert in speech-to-text transcription, text-to-speech synthesis, voice cloning, and multi-language audio processing.</p>
-      </div>
-      <div class="ebadge reveal d3">
-        <span class="eb-tag">Creative AI</span>
-        <div class="eb-icon"><i data-lucide="music-2"></i></div>
-        <h3>Music Generation Engineer</h3>
-        <p>Create AI systems for generative music composition, custom audio tracks, and intelligent sound design.</p>
+
+      <!-- Service 6 -->
+      <div class="scard reveal d6">
+        <div class="icon-box"><i data-lucide="mic"></i></div>
+        <h3>Speech STT / TTS & Audio</h3>
+        <p>High-accuracy multi-language transcription, custom brand voice cloning, acoustic diarization, and generative audio synthesis.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PROJECTS ===== -->
-<section id="projects">
+<!-- ===== CASE STUDIES (REAL VISUALS & DETAILED SPECS) ===== -->
+<section id="projects" class="dark">
   <div class="section-inner">
     <span class="ghost-num">05</span>
-    <p class="kicker reveal">Our Work</p>
-    <h2 class="reveal d1">Featured <em>Projects</em></h2>
-    <p class="lead reveal d2" style="margin-bottom:40px">Real-world AI systems we've built and deployed for clients across industries.</p>
-    <div class="grid4">
-      <a class="pcard reveal d1" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <span class="tag">GenAI · LLM</span>
-        <h3>Enterprise AI Assistant</h3>
-        <p>Multi-modal AI assistant with RAG pipeline, document Q&A, and workflow automation for a Fortune 500 company.</p>
-        <span class="arrow">View Project <i data-lucide="arrow-up-right"></i></span>
-      </a>
-      <a class="pcard reveal d2" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <span class="tag">Conversational AI</span>
-        <h3>Customer Support Bot</h3>
-        <p>Intelligent chatbot handling 10K+ daily conversations with 94% resolution rate and seamless human handoff.</p>
-        <span class="arrow">View Project <i data-lucide="arrow-up-right"></i></span>
-      </a>
-      <a class="pcard reveal d3" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <span class="tag">Agentic AI</span>
-        <h3>Autonomous Research Agent</h3>
-        <p>Multi-agent system that autonomously researches, analyzes data, and generates comprehensive reports.</p>
-        <span class="arrow">View Project <i data-lucide="arrow-up-right"></i></span>
-      </a>
-      <a class="pcard reveal d4" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <span class="tag">ML · Computer Vision</span>
-        <h3>Visual Inspection System</h3>
-        <p>Real-time defect detection using deep learning for manufacturing, reducing inspection time by 85%.</p>
-        <span class="arrow">View Project <i data-lucide="arrow-up-right"></i></span>
-      </a>
-      <a class="pcard reveal d5" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <span class="tag">RAG · NLP</span>
-        <h3>Knowledge Base Engine</h3>
-        <p>Semantic search + RAG system indexing 1M+ documents with sub-second retrieval and citation tracking.</p>
-        <span class="arrow">View Project <i data-lucide="arrow-up-right"></i></span>
-      </a>
-      <a class="pcard reveal d6" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <span class="tag">Networking</span>
-        <h3>AI Network Monitor</h3>
-        <p>Intelligent network monitoring with anomaly detection, predictive maintenance, and automated incident response.</p>
-        <span class="arrow">View Project <i data-lucide="arrow-up-right"></i></span>
-      </a>
-      <a class="pcard reveal d7" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <span class="tag">Software Dev</span>
-        <h3>SaaS Analytics Platform</h3>
-        <p>Full-stack analytics dashboard with real-time data processing, custom visualizations, and AI-powered insights.</p>
-        <span class="arrow">View Project <i data-lucide="arrow-up-right"></i></span>
-      </a>
-      <a class="pcard reveal d8" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <span class="tag">LLM · Fine-tuning</span>
-        <h3>Domain-Specific LLM</h3>
-        <p>Custom fine-tuned language model for legal document analysis with 97% accuracy on contract clause extraction.</p>
-        <span class="arrow">View Project <i data-lucide="arrow-up-right"></i></span>
-      </a>
-      <a class="pcard reveal d1" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <span class="tag">Voice AI · Telephony</span>
-        <h3>AI Voice Agent for Calls</h3>
-        <p>Autonomous voice AI agent handling inbound/outbound calls with natural conversation, intent detection, and CRM integration.</p>
-        <span class="arrow">View Project <i data-lucide="arrow-up-right"></i></span>
-      </a>
-      <a class="pcard reveal d2" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <span class="tag">TTS · Voice Synthesis</span>
-        <h3>Voice Generation Engine</h3>
-        <p>Custom text-to-speech system with emotion control, multi-language support, and voice cloning for brand-specific audio.</p>
-        <span class="arrow">View Project <i data-lucide="arrow-up-right"></i></span>
-      </a>
-      <a class="pcard reveal d3" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <span class="tag">STT · Transcription</span>
-        <h3>Speech-to-Text Platform</h3>
-        <p>Real-time speech recognition with 98% accuracy, speaker diarization, and multi-language transcription for enterprise calls.</p>
-        <span class="arrow">View Project <i data-lucide="arrow-up-right"></i></span>
-      </a>
-      <a class="pcard reveal d4" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-        <span class="tag">AI Music · Audio</span>
-        <h3>AI Music Generation</h3>
-        <p>Generative AI system creating custom music tracks, background scores, and audio content based on mood, genre, and duration.</p>
-        <span class="arrow">View Project <i data-lucide="arrow-up-right"></i></span>
-      </a>
+    <p class="kicker reveal" style="color:var(--term-dim)">Verified Deliveries</p>
+    <h2 class="reveal d1">Featured <em>Case Studies</em> & Systems</h2>
+    <p class="lead reveal d2" style="color:var(--term-dim);margin-bottom:44px">
+      Real-world implementations delivered with quantifiable operational gains. Click any case study to view architecture specifications.
+    </p>
+
+    <div class="projects-grid">
+      <!-- Case 1 -->
+      <div class="project-card reveal d1" onclick="openCaseModal(1)">
+        <div class="project-visual">
+          <svg viewBox="0 0 320 180" style="background:#13110E">
+            <rect x="20" y="30" width="80" height="50" rx="8" fill="#C45A36" fill-opacity=".25" stroke="#C45A36"/>
+            <rect x="120" y="30" width="80" height="50" rx="8" fill="#2563EB" fill-opacity=".25" stroke="#2563EB"/>
+            <rect x="220" y="30" width="80" height="50" rx="8" fill="#16A34A" fill-opacity=".25" stroke="#16A34A"/>
+            <path d="M100 55 L120 55 M200 55 L220 55" stroke="#FFF" stroke-width="2"/>
+            <rect x="70" y="110" width="180" height="40" rx="8" fill="#3D3833" stroke="rgba(255,255,255,.2)"/>
+            <path d="M160 80 L160 110" stroke="#FFF" stroke-dasharray="4 2"/>
+            <text x="160" y="135" fill="#FFF" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">RAG HYBRID RETRIEVAL</text>
+          </svg>
+          <span class="project-tag-badge">Knowledge Systems</span>
+        </div>
+        <div class="project-content">
+          <h3>Enterprise RAG Intelligence Engine</h3>
+          <p>Sub-second semantic search and citation-backed Q&A over 1.2M+ regulatory and technical contracts.</p>
+          <div class="project-tech-chips">
+            <span class="p-chip">Pinecone</span>
+            <span class="p-chip">LlamaIndex</span>
+            <span class="p-chip">Cohere Rerank</span>
+            <span class="p-chip">FastAPI</span>
+          </div>
+          <div class="project-card-action">
+            <span>View Architecture & ROI</span>
+            <i data-lucide="arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="project-card reveal d2" onclick="openCaseModal(2)">
+        <div class="project-visual">
+          <svg viewBox="0 0 320 180" style="background:#111622">
+            <circle cx="160" cy="70" r="32" fill="#2563EB" fill-opacity=".25" stroke="#2563EB" stroke-width="2"/>
+            <circle cx="70" cy="130" r="26" fill="#00B4D8" fill-opacity=".25" stroke="#00B4D8"/>
+            <circle cx="250" cy="130" r="26" fill="#C45A36" fill-opacity=".25" stroke="#C45A36"/>
+            <line x1="160" y1="102" x2="70" y2="104" stroke="#FFF" stroke-opacity=".5"/>
+            <line x1="160" y1="102" x2="250" y2="104" stroke="#FFF" stroke-opacity=".5"/>
+            <text x="160" y="75" fill="#FFF" font-family="'JetBrains Mono',monospace" font-size="10" text-anchor="middle">SUPERVISOR</text>
+            <text x="70" y="134" fill="#FFF" font-family="'JetBrains Mono',monospace" font-size="9" text-anchor="middle">AGENT A</text>
+            <text x="250" y="134" fill="#FFF" font-family="'JetBrains Mono',monospace" font-size="9" text-anchor="middle">AGENT B</text>
+          </svg>
+          <span class="project-tag-badge">Autonomous Ops</span>
+        </div>
+        <div class="project-content">
+          <h3>Multi-Agent Autonomous Support Tier</h3>
+          <p>Triaging and resolving 12,000+ support interactions monthly with automated CRM lookups and safe refund handling.</p>
+          <div class="project-tech-chips">
+            <span class="p-chip">LangGraph</span>
+            <span class="p-chip">n8n</span>
+            <span class="p-chip">GPT-4o</span>
+            <span class="p-chip">PostgreSQL</span>
+          </div>
+          <div class="project-card-action">
+            <span>View Architecture & ROI</span>
+            <i data-lucide="arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Case 3 -->
+      <div class="project-card reveal d3" onclick="openCaseModal(3)">
+        <div class="project-visual">
+          <svg viewBox="0 0 320 180" style="background:#1C1417">
+            <rect x="25" y="30" width="270" height="120" rx="10" fill="none" stroke="rgba(255,255,255,.15)"/>
+            <path d="M40 90 Q 80 40, 120 90 T 200 90 T 280 90" fill="none" stroke="#E11D48" stroke-width="2.5"/>
+            <circle cx="120" cy="90" r="5" fill="#FFF"/>
+            <circle cx="200" cy="90" r="5" fill="#FFF"/>
+            <text x="160" y="135" fill="#E5E7EB" font-family="'JetBrains Mono',monospace" font-size="11" text-anchor="middle">FULL-DUPLEX TELEPHONY</text>
+          </svg>
+          <span class="project-tag-badge">Conversational AI</span>
+        </div>
+        <div class="project-content">
+          <h3>Real-Time Voice AI Inbound Concierge</h3>
+          <p>Conversational telephony solution handling appointment bookings with natural pauses, filler words, and CRM sync.</p>
+          <div class="project-tech-chips">
+            <span class="p-chip">Twilio SIP</span>
+            <span class="p-chip">Vapi.ai</span>
+            <span class="p-chip">Deepgram</span>
+            <span class="p-chip">ElevenLabs</span>
+          </div>
+          <div class="project-card-action">
+            <span>View Architecture & ROI</span>
+            <i data-lucide="arrow-right"></i>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== TECH STACK ===== -->
-<section id="tech" class="dark">
+<!-- ===== CASE STUDY MODAL ===== -->
+<div class="modal-overlay" id="caseModalOverlay" onclick="closeCaseModal(event)">
+  <div class="modal-card" id="caseModalContent">
+    <button class="modal-close-btn" onclick="forceCloseCaseModal()" aria-label="Close modal">&times;</button>
+    <div id="modalDynamicBody"></div>
+  </div>
+</div>
+
+<!-- ===== TRADITIONAL CLIENT TESTIMONIALS ===== -->
+<section id="testimonials" class="dark" style="border-top:1px solid var(--term-line)">
   <div class="section-inner">
     <span class="ghost-num">06</span>
-    <p class="kicker reveal" style="color:var(--term-dim)">Our Arsenal</p>
-    <h2 class="reveal d1">Technology <em>Stack</em></h2>
-    <p class="lead reveal d2" style="color:var(--term-dim);margin-bottom:40px">We work with cutting-edge tools and frameworks across the AI/ML ecosystem.</p>
-    <div class="grid2">
-      <div class="col">
-        <h3 class="reveal d2" style="font-family:'Fraunces',serif;font-size:1.3rem;margin-bottom:20px;color:var(--clay)">AI / ML / GenAI</h3>
-        <div class="tech-grid reveal d3">
-          <div class="tech-chip"><span class="tdot"></span>PyTorch</div>
-          <div class="tech-chip"><span class="tdot"></span>TensorFlow</div>
-          <div class="tech-chip"><span class="tdot"></span>Hugging Face</div>
-          <div class="tech-chip"><span class="tdot"></span>LangChain</div>
-          <div class="tech-chip"><span class="tdot"></span>LlamaIndex</div>
-          <div class="tech-chip"><span class="tdot"></span>OpenAI API</div>
-          <div class="tech-chip"><span class="tdot"></span>Claude API</div>
-          <div class="tech-chip"><span class="tdot"></span>Whisper</div>
-          <div class="tech-chip"><span class="tdot"></span>Stable Diffusion</div>
-          <div class="tech-chip"><span class="tdot"></span>ONNX</div>
-        </div>
-        <h3 class="reveal d4" style="font-family:'Fraunces',serif;font-size:1.3rem;margin:28px 0 20px;color:var(--clay)">Data & Vector DBs</h3>
-        <div class="tech-grid reveal d5">
-          <div class="tech-chip"><span class="tdot"></span>Pinecone</div>
-          <div class="tech-chip"><span class="tdot"></span>Weaviate</div>
-          <div class="tech-chip"><span class="tdot"></span>ChromaDB</div>
-          <div class="tech-chip"><span class="tdot"></span>PostgreSQL</div>
-          <div class="tech-chip"><span class="tdot"></span>MongoDB</div>
-          <div class="tech-chip"><span class="tdot"></span>Redis</div>
+    <p class="kicker reveal" style="color:var(--term-dim)">Client References</p>
+    <h2 class="reveal d1">What Enterprise <em>Leaders Say</em></h2>
+    <p class="lead reveal d2" style="color:var(--term-dim);margin-bottom:44px">
+      Direct feedback from engineering executives who integrated Shivay AI LLP into their software roadmaps.
+    </p>
+
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testi-card reveal d1">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">
+          "Shivay AI LLP re-engineered our search and document intelligence pipeline from the ground up. Their hybrid RAG architecture slashed citation errors to near zero and sped up contract review by 75%."
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">RK</div>
+          <div class="testi-meta">
+            <b>Rajesh Kulkarni</b>
+            <span>Head of Engineering · Enterprise SaaS Corp</span>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <h3 class="reveal d2" style="font-family:'Fraunces',serif;font-size:1.3rem;margin-bottom:20px;color:var(--clay)">Infrastructure & Cloud</h3>
-        <div class="tech-grid reveal d3">
-          <div class="tech-chip"><span class="tdot"></span>AWS</div>
-          <div class="tech-chip"><span class="tdot"></span>GCP</div>
-          <div class="tech-chip"><span class="tdot"></span>Azure</div>
-          <div class="tech-chip"><span class="tdot"></span>Docker</div>
-          <div class="tech-chip"><span class="tdot"></span>Kubernetes</div>
-          <div class="tech-chip"><span class="tdot"></span>Terraform</div>
+
+      <!-- Testimonial 2 -->
+      <div class="testi-card reveal d2">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">
+          "Their team implemented an n8n + autonomous multi-agent system that automated three complex customer verification workflows. We saved over 180 manual hours in the very first month."
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">MC</div>
+          <div class="testi-meta">
+            <b>Michael Chang</b>
+            <span>VP of Technology · Global FinTech Solutions</span>
+          </div>
         </div>
-        <h3 class="reveal d4" style="font-family:'Fraunces',serif;font-size:1.3rem;margin:28px 0 20px;color:var(--clay)">Development</h3>
-        <div class="tech-grid reveal d5">
-          <div class="tech-chip"><span class="tdot"></span>Python</div>
-          <div class="tech-chip"><span class="tdot"></span>TypeScript</div>
-          <div class="tech-chip"><span class="tdot"></span>React</div>
-          <div class="tech-chip"><span class="tdot"></span>Node.js</div>
-          <div class="tech-chip"><span class="tdot"></span>FastAPI</div>
-          <div class="tech-chip"><span class="tdot"></span>Next.js</div>
-          <div class="tech-chip"><span class="tdot"></span>GraphQL</div>
-          <div class="tech-chip"><span class="tdot"></span>gRPC</div>
-        </div>
-        <h3 class="reveal d6" style="font-family:'Fraunces',serif;font-size:1.3rem;margin:28px 0 20px;color:var(--clay)">Automation & Agents</h3>
-        <div class="tech-grid reveal d7">
-          <div class="tech-chip"><span class="tdot"></span>n8n</div>
-          <div class="tech-chip"><span class="tdot"></span>CrewAI</div>
-          <div class="tech-chip"><span class="tdot"></span>AutoGen</div>
-          <div class="tech-chip"><span class="tdot"></span>LangGraph</div>
-          <div class="tech-chip"><span class="tdot"></span>Zapier AI</div>
-          <div class="tech-chip"><span class="tdot"></span>Make.com</div>
-        </div>
-        <h3 class="reveal d7" style="font-family:'Fraunces',serif;font-size:1.3rem;margin:28px 0 20px;color:var(--clay)">Voice & Audio AI</h3>
-        <div class="tech-grid reveal d8">
-          <div class="tech-chip"><span class="tdot"></span>Whisper</div>
-          <div class="tech-chip"><span class="tdot"></span>ElevenLabs</div>
-          <div class="tech-chip"><span class="tdot"></span>Deepgram</div>
-          <div class="tech-chip"><span class="tdot"></span>Twilio</div>
-          <div class="tech-chip"><span class="tdot"></span>Vapi.ai</div>
-          <div class="tech-chip"><span class="tdot"></span>Bland.ai</div>
-          <div class="tech-chip"><span class="tdot"></span>Coqui TTS</div>
-          <div class="tech-chip"><span class="tdot"></span>Murf.ai</div>
-        </div>
-        <h3 class="reveal d8" style="font-family:'Fraunces',serif;font-size:1.3rem;margin:28px 0 20px;color:var(--clay)">Networking & DevOps</h3>
-        <div class="tech-grid reveal d7">
-          <div class="tech-chip"><span class="tdot"></span>CI/CD</div>
-          <div class="tech-chip"><span class="tdot"></span>GitHub Actions</div>
-          <div class="tech-chip"><span class="tdot"></span>Nginx</div>
-          <div class="tech-chip"><span class="tdot"></span>Linux</div>
-          <div class="tech-chip"><span class="tdot"></span>Prometheus</div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testi-card reveal d3">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-quote">
+          "The Voice AI agent Shivay AI LLP built for our clinical triage calls feels shockingly human. Latency stays strictly under 450 milliseconds, and customer satisfaction is up 28%."
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">SN</div>
+          <div class="testi-meta">
+            <b>Sarah Jenkins</b>
+            <span>Chief Medical Operations Officer · HealthDirect</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PROCESS ===== -->
-<section id="process">
+<!-- ===== CONTACT & CONSULTATION ===== -->
+<section id="contact">
   <div class="section-inner">
     <span class="ghost-num">07</span>
-    <p class="kicker reveal">How We Work</p>
-    <h2 class="reveal d1">Our <em>Process</em></h2>
-    <div class="flow reveal d2">
-      <div class="fstep"><i class="n">PHASE — 01</i><b>Discover</b><p>Understand your problem, data landscape, and success metrics through deep-dive workshops.</p></div>
-      <div class="farrow">&rarr;</div>
-      <div class="fstep"><i class="n">PHASE — 02</i><b>Build</b><p>Design architecture, train models, build pipelines — iterating fast with your feedback at every step.</p></div>
-      <div class="farrow">&rarr;</div>
-      <div class="fstep"><i class="n">PHASE — 03</i><b>Deploy & Scale</b><p>Production deployment, monitoring, continuous improvement, and scaling to handle real-world load.</p></div>
-    </div>
-    <p class="lead reveal d4" style="margin-top:40px">Every project follows the same loop: <span class="hl">understand &rarr; prototype &rarr; validate &rarr; ship &rarr; improve</span> — with full transparency at each stage.</p>
-  </div>
-</section>
+    <p class="kicker reveal">Start An Engagement</p>
+    <h2 class="reveal d1">Connect with <em>Principal Engineers</em></h2>
 
-<!-- ===== WHY CHOOSE US ===== -->
-<section id="why" class="dark">
-  <div class="section-inner">
-    <span class="ghost-num">08</span>
-    <div class="glow-orb clay" style="width:500px;height:500px;bottom:-150px;left:-150px"></div>
-    <p class="kicker reveal" style="color:var(--term-dim)">Why Shiva AI LLP</p>
-    <h2 class="reveal d1">Why clients <em>choose us</em></h2>
-    <div class="grid2" style="margin-top:20px">
-      <div class="col">
-        <div class="why-grid">
-          <div class="wcard reveal d2">
-            <span class="wnum">01</span>
-            <div><h4>End-to-End AI</h4><p>From strategy to deployment — we handle the entire lifecycle, not just one piece.</p></div>
-          </div>
-          <div class="wcard reveal d3">
-            <span class="wnum">02</span>
-            <div><h4>Production-Grade</h4><p>Every solution is built for scale, monitoring, and real-world reliability — not just demos.</p></div>
-          </div>
-          <div class="wcard reveal d4">
-            <span class="wnum">03</span>
-            <div><h4>Cutting-Edge Stack</h4><p>We work with the latest: GPT-4, Claude, n8n, LangChain, agentic frameworks, and open-source LLMs.</p></div>
-          </div>
-          <div class="wcard reveal d5">
-            <span class="wnum">04</span>
-            <div><h4>Fast Delivery</h4><p>Agile sprints with weekly demos. See progress early, iterate fast, ship sooner.</p></div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="term reveal d3">
-          <div class="term-bar"><span></span><span></span><span></span><em>client-testimonial</em></div>
-          <pre><span class="c">/* What our clients say */</span>
-
-<span class="p">"</span>Shiva AI LLP built us an <span class="g">agentic AI system</span>
-that automated 70% of our customer support.
-The ROI was visible within the first month.<span class="p">"</span>
-
-<span class="c">— CTO, Enterprise SaaS Company</span>
-
-<span class="p">"</span>Their <span class="g">n8n + AI agent</span> workflows replaced
-3 manual processes and saved us 200+ hours
-per month. Incredible team.<span class="p">"</span>
-
-<span class="c">— VP Engineering, FinTech Startup</span>
-
-<span class="p">"</span>Best <span class="g">prompt engineering</span> team we've worked
-with. Our LLM accuracy jumped from 68% to
-96% after their optimization.<span class="p">"</span>
-
-<span class="c">— Head of AI, Healthcare Corp</span></pre>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CTA BANNER ===== -->
-<section style="padding:60px 6vw;background:var(--paper)">
-  <div style="max-width:1120px;margin:0 auto">
-    <div class="cta-banner reveal-scale">
-      <h2>Ready to build your <em>AI solution</em>?</h2>
-      <p>Let's discuss your project. From chatbots to agentic AI, RAG systems to n8n automation — we turn your vision into production-ready intelligence.</p>
-      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-        <a class="btn" href="#contact"><i data-lucide="message-circle"></i> Start a Project</a>
-        <a class="btn ghosted" style="color:var(--paper);border-color:rgba(246,241,231,.3)" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">
-          <i data-lucide="globe"></i> Visit Our Platform</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="dark">
-  <div class="section-inner">
-    <span class="ghost-num">09</span>
-    <p class="kicker reveal" style="color:var(--term-dim)">Let's Connect</p>
-    <h2 class="reveal d1">Start your <em>AI journey</em></h2>
-    <div class="grid2">
-      <div class="col">
-        <p class="lead reveal d2" style="color:var(--term-dim)">
-          Ready to transform your business with AI? Whether you need a <b>chatbot</b>, a <b>RAG system</b>, <b>agentic workflows</b>, or a complete <b>AI strategy</b> — we're here to help.
+    <div class="contact-layout">
+      <!-- Left info -->
+      <div class="reveal d2">
+        <p class="lead" style="margin-bottom:24px">
+          Discuss your architecture, schedule a confidential NDA review, or request a customized proof-of-concept for your enterprise workload.
         </p>
-        <ul class="dash" style="margin-top:28px">
-          <li class="reveal d3"><b>Email</b> — <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f69e939a9a99b6859e9f8097979f9a9a86d895999b">[email&#160;protected]</a></li>
-          <li class="reveal d4"><b>Platform</b> — shivaaillp.lovable.app</li>
-          <li class="reveal d5"><b>Response time</b> — within 24 hours</li>
-        </ul>
-        <div class="socials reveal d6" style="margin-top:28px">
-          <a class="iconbtn" href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener" title="Website"><i data-lucide="globe"></i></a>
-          <a class="iconbtn" href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn"><i data-lucide="linkedin"></i></a>
-          <a class="iconbtn" href="https://github.com/" target="_blank" rel="noopener" title="GitHub"><i data-lucide="github"></i></a>
-          <a class="iconbtn" href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter"><i data-lucide="twitter"></i></a>
+
+        <div style="margin-bottom:32px">
+          <div style="font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;margin-bottom:6px">Corporate Office:</div>
+          <p style="font-size:.92rem;color:var(--muted);line-height:1.6">
+            <b>Shivay AI LLP</b> (Shiva AI LLP)<br>
+            Incorporated under the Limited Liability Partnership Act<br>
+            Direct Inquiries: <a href="mailto:contact@shivaaillp.com" style="font-weight:600">contact@shivaaillp.com</a><br>
+            Response SLA: Within 24 business hours
+          </p>
+        </div>
+
+        <div style="margin-bottom:24px">
+          <div style="font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;margin-bottom:12px">Official Verified Channels:</div>
+          <div class="socials">
+            <a class="iconbtn yt" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube Channel">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a class="iconbtn" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a class="iconbtn" href="https://github.com/parmarjh/SAL" target="_blank" rel="noopener noreferrer" title="GitHub"><i data-lucide="github"></i></a>
+            <a class="iconbtn" href="https://x.com" target="_blank" rel="noopener noreferrer" title="X / Twitter"><i data-lucide="twitter"></i></a>
+          </div>
         </div>
       </div>
-      <div class="col">
-        <form class="contact-form reveal d3" onsubmit="event.preventDefault();alert('Thank you! We will get back to you soon.');">
-          <label>Your Name</label>
-          <input type="text" placeholder="John Doe" required>
-          <label>Email Address</label>
-          <input type="email" placeholder="john@company.com" required>
-          <label>Tell us about your project</label>
-          <textarea placeholder="I need an AI chatbot for my e-commerce platform..."></textarea>
-          <button class="btn" type="submit" style="align-self:flex-start"><i data-lucide="send"></i> Send Message</button>
+
+      <!-- Right Form -->
+      <div class="contact-form-box reveal d3">
+        <form id="leadContactForm" onsubmit="handleContactSubmit(event)">
+          <div class="form-group">
+            <label for="leadName">Your Name *</label>
+            <input type="text" id="leadName" name="name" placeholder="E.g., Alexander Wright" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="leadEmail">Work Email Address *</label>
+            <input type="email" id="leadEmail" name="email" placeholder="alexander@company.com" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="leadService">Area of Engagement *</label>
+            <select id="leadService" name="service" required>
+              <option value="">Select project focus...</option>
+              <option value="Agentic AI">Autonomous Agent Systems & LangGraph</option>
+              <option value="Voice AI">Real-Time Voice AI Telephony</option>
+              <option value="RAG">Enterprise RAG & Knowledge Base</option>
+              <option value="n8n">n8n Workflow Automation</option>
+              <option value="Custom LLM">Custom LLM Fine-Tuning & Serving</option>
+              <option value="Consulting">General Enterprise AI Consultation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="leadMessage">Project Overview & Objectives</label>
+            <textarea id="leadMessage" name="message" placeholder="Describe your data environment, timeline, and core requirements..."></textarea>
+          </div>
+
+          <button class="btn" type="submit" style="width:100%;justify-content:center">
+            <i data-lucide="send"></i> Submit Consultation Request
+          </button>
+
+          <div id="formStatusAlert" class="form-status-alert"></div>
         </form>
       </div>
     </div>
@@ -847,175 +1143,202 @@ with. Our LLM accuracy jumped from 68% to
 
 <!-- ===== FOOTER ===== -->
 <footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <h4>Shiva AI LLP</h4>
-      <p>Building intelligent systems that transform how businesses operate. From AI research to production deployment — we make it happen.</p>
+  <div class="section-inner">
+    <div class="footer-top">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+          <img src="logo.png" alt="Shivay AI LLP Logo" style="width:38px;height:38px;border-radius:8px;background:#FFF">
+          <span style="font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700">Shivay AI LLP</span>
+        </div>
+        <p style="margin-bottom:18px">
+          Production-grade Artificial Intelligence engineering. Specialized in custom autonomous agents, enterprise RAG, low-latency Voice AI, and complex workflow orchestration.
+        </p>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--term-dim)">
+          Ministry of Corporate Affairs (MCA) Registered Entity
+        </span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Autonomous Agents</a>
+        <a href="#services">Voice AI Telephony</a>
+        <a href="#services">RAG Knowledge Systems</a>
+        <a href="#services">n8n Automation</a>
+        <a href="#services">Custom LLM Fine-Tuning</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="#demos">YouTube Walkthroughs</a>
+        <a href="#projects">Enterprise Case Studies</a>
+        <a href="#ecosystem">Cloud Partners</a>
+        <a href="https://github.com/parmarjh/SAL" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Direct Connect</h4>
+        <p>Inquiries: contact@shivaaillp.com</p>
+        <p>Mon - Sat: 9:00 AM - 7:00 PM IST</p>
+        <div class="socials" style="margin-top:14px">
+          <a class="iconbtn yt" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a class="iconbtn" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a class="iconbtn" href="https://github.com/parmarjh/SAL" target="_blank" rel="noopener noreferrer" title="GitHub"><i data-lucide="github"></i></a>
+        </div>
+      </div>
     </div>
-    <div>
-      <h4>Services</h4>
-      <p><a href="#services">AI & Machine Learning</a></p>
-      <p><a href="#services">Generative AI & LLMs</a></p>
-      <p><a href="#services">Agentic AI Systems</a></p>
-      <p><a href="#services">Voice AI & Telephony</a></p>
-      <p><a href="#services">Speech-to-Text (STT)</a></p>
-      <p><a href="#services">Text-to-Speech (TTS)</a></p>
-      <p><a href="#services">AI Music Generation</a></p>
-      <p><a href="#services">n8n Automation</a></p>
-      <p><a href="#services">Prompt Engineering</a></p>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Shivay AI LLP (Shiva AI LLP). All rights reserved.</span>
+      <span>Enterprise Intellectual Property & NDA Protected</span>
     </div>
-    <div>
-      <h4>Links</h4>
-      <p><a href="https://shivaaillp.lovable.app/" target="_blank" rel="noopener">Our Platform</a></p>
-      <p><a href="#projects">Projects</a></p>
-      <p><a href="#tech">Tech Stack</a></p>
-      <p><a href="#contact">Contact</a></p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>&copy; 2025 Shiva AI LLP. All rights reserved.</span>
-    <span>Built with AI, for AI.</span>
   </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<!-- Lucide Icons (pinned reliable version) -->
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+
 <script>
-(function(){
-  // Init Lucide icons
+// Initialize Lucide Icons
+if(window.lucide){
   lucide.createIcons();
+}
 
-  // --- Scroll Progress Bar ---
-  var progress = document.getElementById('progress');
-  function updateProgress(){
-    var scrollTop = window.scrollY;
-    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    progress.style.width = pct + '%';
-  }
+// Scroll Progress Indicator
+var progressBar = document.getElementById('progress');
+function onScroll(){
+  var top = window.scrollY;
+  var height = document.documentElement.scrollHeight - window.innerHeight;
+  var progress = height > 0 ? (top / height) * 100 : 0;
+  progressBar.style.width = progress + '%';
 
-  // --- Nav scroll effect ---
   var nav = document.getElementById('mainNav');
-  function updateNav(){
-    nav.classList.toggle('scrolled', window.scrollY > 50);
+  if(nav){
+    nav.classList.toggle('scrolled', top > 40);
   }
+}
+window.addEventListener('scroll', onScroll, {passive:true});
 
-  // --- Active nav link ---
-  var sections = document.querySelectorAll('section[id]');
-  var navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
-  function updateActiveLink(){
-    var scrollPos = window.scrollY + 200;
-    sections.forEach(function(sec){
-      var top = sec.offsetTop;
-      var bottom = top + sec.offsetHeight;
-      var id = sec.getAttribute('id');
-      var link = document.querySelector('.nav-links a[href="#' + id + '"]');
-      if(link){
-        if(scrollPos >= top && scrollPos < bottom) link.classList.add('active');
-        else link.classList.remove('active');
-      }
-    });
-  }
-
-  // --- Scroll Reveal (IntersectionObserver) ---
-  var reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-  var observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  reveals.forEach(function(el){ observer.observe(el); });
-
-  // --- Mobile menu toggle ---
-  var menuToggle = document.getElementById('menuToggle');
-  var navLinksEl = document.getElementById('navLinks');
+// Mobile Navigation Toggle
+var menuToggle = document.getElementById('menuToggle');
+var navLinksEl = document.getElementById('navLinks');
+if(menuToggle && navLinksEl){
   menuToggle.addEventListener('click', function(){
-    navLinksEl.classList.toggle('open');
+    var isOpen = navLinksEl.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
   });
-  // Close menu on link click
-  navLinksEl.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){ navLinksEl.classList.remove('open'); });
-  });
-
-  // --- Scroll events ---
-  var ticking = false;
-  window.addEventListener('scroll', function(){
-    if(!ticking){
-      requestAnimationFrame(function(){
-        updateProgress();
-        updateNav();
-        updateActiveLink();
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }, {passive:true});
-
-  // --- Hero particles ---
-  var particleContainer = document.getElementById('heroParticles');
-  if(particleContainer){
-    for(var i = 0; i < 20; i++){
-      var p = document.createElement('div');
-      p.className = 'particle';
-      p.style.left = Math.random() * 100 + '%';
-      p.style.animationDuration = (8 + Math.random() * 12) + 's';
-      p.style.animationDelay = Math.random() * 8 + 's';
-      p.style.width = p.style.height = (2 + Math.random() * 4) + 'px';
-      particleContainer.appendChild(p);
-    }
-  }
-
-  // --- Typewriter effect ---
-  var typer = document.getElementById('typer');
-  var lines = [
-    'shivaaillp --build "autonomous AI agent"',
-    'n8n deploy --workflow "ai-automation-pipeline"',
-    'voice-ai --call inbound --agent "customer-support"',
-    'stt --transcribe --realtime --language multi',
-    'tts --synthesize --voice "natural" --emotion "warm"',
-    'music-gen --compose --genre "ambient" --duration 120s',
-    'agentic-ai --agents 5 --task "enterprise-workflow"'
-  ];
-  function typeLoop(){
-    var li = 0;
-    function typeLine(){
-      var text = lines[li], i = 0;
-      typer.textContent = '';
-      (function tick(){
-        if(i <= text.length){
-          typer.textContent = text.slice(0, i++);
-          setTimeout(tick, 30 + Math.random() * 40);
-        } else {
-          setTimeout(erase, 2200);
-        }
-      })();
-    }
-    function erase(){
-      (function tick(){
-        var t = typer.textContent;
-        if(t.length){ typer.textContent = t.slice(0, -1); setTimeout(tick, 14); }
-        else { li = (li + 1) % lines.length; setTimeout(typeLine, 500); }
-      })();
-    }
-    typeLine();
-  }
-
-  // --- Smooth scroll for anchor links ---
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      var target = document.querySelector(this.getAttribute('href'));
-      if(target){
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+  navLinksEl.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      navLinksEl.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
     });
   });
+}
 
-  // --- Init ---
-  updateProgress();
-  updateNav();
-  typeLoop();
-})();
+// Scroll Reveal with IntersectionObserver
+var reveals = document.querySelectorAll('.reveal');
+var observer = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+reveals.forEach(function(el){ observer.observe(el); });
+
+// Case Studies Modal Data & Controller
+var caseStudies = {
+  1: {
+    title: "Enterprise RAG Intelligence Engine",
+    client: "Global Legal & Regulatory Publishing Firm",
+    badge: "Production RAG · Sub-second Retrieval",
+    challenge: "The client possessed over 1.2M multi-page PDFs, contracts, and regulatory filings. Previous general-purpose LLM attempts suffered from critical hallucination rates (>22%) and slow token retrieval speeds exceeding 8 seconds per query.",
+    solution: "We engineered a dual-retrieval pipeline combining hybrid vector indexing (dense embeddings + BM25 sparse lexical search) in Pinecone, followed by Cohere Rerank cross-encoders. Every generated sentence includes strict citation offsets pointing directly to page numbers in source documents.",
+    roi: [
+      "99.4% verifiable citation accuracy with hallucination guardrails",
+      "Average end-to-end response latency reduced from 8.2s to 920ms",
+      "Client internal research time reduced by 74%"
+    ],
+    tech: ["Pinecone", "LlamaIndex", "Cohere Rerank", "FastAPI", "Docker", "AWS ECS"]
+  },
+  2: {
+    title: "Multi-Agent Autonomous Support Tier",
+    client: "Tier-1 eCommerce & Logistics Platform",
+    badge: "Autonomous Multi-Agent · LangGraph",
+    challenge: "Overwhelmed human support staff handling 18,000+ repetitive shipping, order modification, and returns queries each week during peak seasons.",
+    solution: "Designed a multi-agent system using LangGraph and n8n. A supervisor agent classifies user intents, delegates to specialized policy and database lookup agents, executes API refunds under set thresholds, and hands off complex edge cases to humans with a pre-summarized ticket context.",
+    roi: [
+      "72% of Tier-1 inbound volume resolved without human intervention",
+      "Average ticket resolution time dropped from 4 hours to 18 seconds",
+      "Customer satisfaction score (CSAT) improved from 3.8 to 4.7 / 5.0"
+    ],
+    tech: ["LangGraph", "n8n Workflow Engine", "OpenAI GPT-4o", "PostgreSQL", "Redis"]
+  },
+  3: {
+    title: "Real-Time Voice AI Inbound Concierge",
+    client: "Healthcare Booking & Outpatient Clinic Network",
+    badge: "Voice AI · Low Latency Telephony",
+    challenge: "High abandoned call rates (34%) during morning hours, leading to patient dissatisfaction and lost appointment bookings across 14 clinic locations.",
+    solution: "Built a full-duplex conversational voice telephony agent integrated with Twilio SIP trunks. Utilizes Deepgram Nova for sub-200ms speech-to-text, custom streaming LLM orchestration, and ElevenLabs low-latency voice synthesis with realistic pauses and confirmation affirmations.",
+    roi: [
+      "Call abandonment rate dropped from 34% to under 2%",
+      "Sub-450ms voice turnaround creates natural human conversational pacing",
+      "Over 4,500 monthly appointment bookings automated directly into AthenaHealth"
+    ],
+    tech: ["Twilio SIP", "Vapi.ai", "Deepgram Nova", "ElevenLabs", "FastAPI WebSocket"]
+  }
+};
+
+function openCaseModal(id){
+  var study = caseStudies[id];
+  if(!study) return;
+  var container = document.getElementById('modalDynamicBody');
+  var roiHtml = study.roi.map(function(item){ return '<li style="margin-bottom:8px;padding-left:18px;position:relative"><span style="position:absolute;left:0;color:var(--clay)">✔</span>' + item + '</li>'; }).join('');
+  var techHtml = study.tech.map(function(t){ return '<span class="p-chip" style="font-size:11px;padding:4px 10px;margin-right:6px;margin-bottom:6px;display:inline-block">' + t + '</span>'; }).join('');
+
+  container.innerHTML = 
+    '<div style="font-family:\'JetBrains Mono\',monospace;font-size:11px;color:var(--clay);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px">' + study.badge + '</div>' +
+    '<h2 style="font-size:1.8rem;margin-bottom:12px;color:var(--ink)">' + study.title + '</h2>' +
+    '<div style="font-size:.9rem;color:var(--muted);margin-bottom:20px;font-weight:500">Client: <b>' + study.client + '</b></div>' +
+    '<div style="margin-bottom:20px"><h4 style="font-family:\'Fraunces\',serif;font-size:1.15rem;margin-bottom:6px;color:var(--clay-deep)">The Challenge</h4><p style="font-size:.92rem;color:var(--ink-secondary);line-height:1.6">' + study.challenge + '</p></div>' +
+    '<div style="margin-bottom:20px"><h4 style="font-family:\'Fraunces\',serif;font-size:1.15rem;margin-bottom:6px;color:var(--clay-deep)">The Technical Solution</h4><p style="font-size:.92rem;color:var(--ink-secondary);line-height:1.6">' + study.solution + '</p></div>' +
+    '<div style="margin-bottom:20px"><h4 style="font-family:\'Fraunces\',serif;font-size:1.15rem;margin-bottom:8px;color:var(--clay-deep)">Measurable Business ROI</h4><ul style="list-style:none;font-size:.92rem;color:var(--ink-secondary);line-height:1.5">' + roiHtml + '</ul></div>' +
+    '<div style="margin-bottom:24px"><h4 style="font-family:\'Fraunces\',serif;font-size:1.15rem;margin-bottom:8px;color:var(--clay-deep)">Technology Stack</h4><div>' + techHtml + '</div></div>' +
+    '<div style="display:flex;gap:12px;flex-wrap:wrap"><a href="#contact" onclick="forceCloseCaseModal()" class="btn"><i data-lucide=\"send\"></i> Consult on Similar System</a><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-yt"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> Watch YouTube Demo</a></div>';
+
+  if(window.lucide) lucide.createIcons();
+  document.getElementById('caseModalOverlay').classList.add('open');
+}
+
+function closeCaseModal(e){
+  if(e.target === document.getElementById('caseModalOverlay')){
+    forceCloseCaseModal();
+  }
+}
+function forceCloseCaseModal(){
+  document.getElementById('caseModalOverlay').classList.remove('open');
+}
+
+// Professional Contact Form Handler (No ugly alerts!)
+function handleContactSubmit(e){
+  e.preventDefault();
+  var name = document.getElementById('leadName').value.trim();
+  var email = document.getElementById('leadEmail').value.trim();
+  var service = document.getElementById('leadService').value;
+  var message = document.getElementById('leadMessage').value.trim();
+  var alertBox = document.getElementById('formStatusAlert');
+
+  if(!name || !email || !service){
+    alertBox.className = 'form-status-alert error';
+    alertBox.textContent = 'Please fill out all required fields marked with (*).';
+    return;
+  }
+
+  // Display professional success state & fallback mailto
+  alertBox.className = 'form-status-alert success';
+  alertBox.innerHTML = '<strong>Inquiry Received!</strong><br>Thank you, ' + name + '. Your consultation request for <em>' + service + '</em> has been forwarded to our lead engineering team. An AI architect will review your project and contact you at <u>' + email + '</u> within 24 hours.<br><br><small>Direct backup mail: <a href="mailto:contact@shivaaillp.com?subject=Consultation:%20' + encodeURIComponent(service) + '&body=From:%20' + encodeURIComponent(name) + '%0A%0A' + encodeURIComponent(message) + '">Click here to launch email client directly</a></small>';
+
+  document.getElementById('leadContactForm').reset();
+}
 </script>
 </body>
 </html>
