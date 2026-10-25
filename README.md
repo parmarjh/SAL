@@ -4,11 +4,15 @@
 
   # Shivay AI LLP (Shiva AI LLP)
   ### Production-Grade Enterprise Artificial Intelligence & Autonomous Agentic Systems
+  <sub>Founded & Led by **[Jatinkumar Parmar](https://www.linkedin.com/in/jhparmar/)**</sub>
+
+  <br />
 
   [![Live Deployment](https://img.shields.io/badge/Live%20Site-sal--amber.vercel.app-blue?style=for-the-badge&logo=vercel)](https://sal-amber.vercel.app)
-  [![YouTube Demos](https://img.shields.io/badge/YouTube-Technical%20Demos-red?style=for-the-badge&logo=youtube)](https://www.youtube.com)
-  [![Entity](https://img.shields.io/badge/Entity-Registered%20LLP%20(MCA)-orange?style=for-the-badge&logo=shield)](https://sal-amber.vercel.app/#about)
-  [![License](https://img.shields.io/badge/IP%20Protection-100%25%20Client%20Owned-green?style=for-the-badge)](https://sal-amber.vercel.app/#contact)
+  [![YouTube Channel](https://img.shields.io/badge/YouTube-Watch%20Demos-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/channel/UCSLMS3odjPxesH02jnhWMnA)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/jhparmar/)
+  [![Medium](https://img.shields.io/badge/Medium-Read%20Articles-black?style=for-the-badge&logo=medium)](https://medium.com/@jhparmar)
+  [![Substack](https://img.shields.io/badge/Substack-Newsletter-FF6719?style=for-the-badge&logo=substack)](https://substack.com/@jhparmar)
 
   <br />
 
@@ -95,15 +99,16 @@ The project is pre-configured for automated continuous deployment:
 
 ---
 
-## 🤝 Enterprise Consultation & Direct Inquiries
+## 🤝 Verified Channels & Publications
 
-For project roadmaps, architecture discussions, or confidential NDA execution:
+Follow our research, engineering breakdowns, and technical tutorials:
 
-- **Corporate Entity:** Shivay AI LLP (Shiva AI LLP)
-- **Direct Email:** [contact@shivaaillp.com](mailto:contact@shivaaillp.com)
-- **Official GitHub:** [github.com/parmarjh/SAL](https://github.com/parmarjh/SAL)
-- **YouTube Channel:** [Watch Architectural Walkthroughs](https://www.youtube.com)
-- **Response SLA:** Within 24 business hours
+- **YouTube Channel:** [youtube.com/@jhparmar (Shivay AI Demos)](https://www.youtube.com/channel/UCSLMS3odjPxesH02jnhWMnA)
+- **LinkedIn Profile:** [linkedin.com/in/jhparmar](https://www.linkedin.com/in/jhparmar/)
+- **Medium Publications:** [medium.com/@jhparmar](https://medium.com/@jhparmar)
+- **Substack Newsletter:** [substack.com/@jhparmar](https://substack.com/@jhparmar)
+- **GitHub Codebase:** [github.com/parmarjh/SAL](https://github.com/parmarjh/SAL)
+- **Direct Consultation Email:** [contact@shivaaillp.com](mailto:contact@shivaaillp.com)
 
 ---
 
